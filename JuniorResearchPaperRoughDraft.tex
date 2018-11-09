@@ -24,11 +24,12 @@ Materials used in this project were quite minimal, due to the centralized nature
 Mathematical Modeling used within this project worked with many equations, but one of the main ones being for the modeling of the Quasi-static field coming from the main Quasi-static magnetic field generator itself. To define this "Generator" of the Quasi-static magnetic field, a Cylinder was designed for the theoretical model, which is for the cylinder, the length being symbolized by it being approximately equal to $\Delta$l, as shown here: $\Delta$l $\approx$ 2.4384 m. Visualizing this, a point of displacement for the field was defined to calculate the possible strength, with that point being defined as
 \subsection{Design of Meta-material Unit Cell}
 When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being defined as 
-\[ \rho =  \begin{array}{cc}
-x  \\ 
-y 
-z
-\end{array} \]
+\[ \rho =  \left(\begin{array}{c}
+x \\
+y \\
+z 
+\end{array}\right)\]
+
 with $\rho$ being the point of displacement being used for calculating the strength of the Quasi-static magnetic field at this point of displacement 
 \subsection{COSMOL Simulations}
 For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, with those parameters being 
