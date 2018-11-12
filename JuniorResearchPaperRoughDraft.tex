@@ -1,6 +1,10 @@
 \documentclass[]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usetikzlibrary{arrows.meta}
 
-%opening
 \title{Using Quasi-static Magnetic Fields and Meta-material Amplifiers to allow for Ubiquitous Wireless Charging}
 \author{Jordan Hill \\ David Stover}
 
@@ -11,44 +15,295 @@
 \pagebreak
 
 \begin{abstract}
-Quasi-static Magnetic fields are Electromagnetic fields that are created from Quasi-static cavity resonance. Meta-materials are materials that have the ability to allow for high amounts of electric resonance, have the possibility to allow for highly efficient wireless charging, and solve the problem of current wireless charging. This causes the user to be restricted there device always while the device is charging, and not allowing the user the use of mobility while using wireless charging with modern methods. Hypothetically, to make the process of wireless charging hundreds of time more efficient through use of Quasi-static magnetic fields and reflective meta-materials as a use to solve this problem. Work for this project was done using the FEM Engine, COSMOL Multi-physics 5.2a, this was also done along Mathematical modeling as well.
+Quasi-static Magnetic fields are Electromagnetic fields that are created from Quasi-static cavity resonance. Meta-materials are materials that have the ability to allow for high amounts of electric resonance, have the possibility to allow for highly efficient wireless charging, and solve the problem of current wireless charging. This causes the user to be restricted there device always while the device is charging, and not allowing the user the use of mobility while using wireless charging with modern methods. Hypothetically, to make the process of wireless charging hundreds of time more efficient through use of Quasi-static magnetic fields and reflective meta-materials as a use to solve this problem. Simulations for this was done using COSMOL 5.2a, and within that software is where the main work was done for calculating absorption of the Quasi-static magnetic field, along with the permittivity of the meta-material, $\epsilon_s$, and the permeability of the meta-material as well, defined as $\mu_0$. The Implemented experiment results that I obtained from COSMOL, in some cases fit the results I expected from the simulations and in some aspects did not fit the results I expected. The Importance of this project is mainly of how the application of such a method could be extremely useful in making the experience in wireless charging more free and open to the user, and not have the user forced to always keep the device on a pad when charging there device wireless, with current methods of wireless charging today being used.
 \end{abstract}
 
 \pagebreak
 
+Wireless Charging, the Pinnacle of refueling devices, free of constraints, nothing holding the user back from being forced to charge with the length of cord limiting there freedom to move around while charging there device. But, a problem is present with Modern Wireless Charging in the current form that it is used in currently, and that is the need for a connection constantly to charge your device. The current method of wireless charging used today is known as Qi Charging. Qi Charging works with the wireless charging device having a built in copper coil. The Copper Coil is attached to the battery of the device, so current is put into the battery correctly while the device is charging. Power is transferred to the device through a Wireless Charging Pad, containing a Copper Coil inside the Pad. Transfer of Power is done between these two coils, using the coil inside the device as an inducting coil, and an alternating electromagnetic field is created. This field is the process responsible for allowing the wireless charging to occur in Qi Charging, and charge the device (Mearin, 2018). But, there is a problem with this process, and that is the lack of mobility, as when you place the device on the pad, you cannot under any circumstances remove it, as if you remove it from the pad, you lose the electromagnetic field that was made between the two coils, one in the pad and the device itself, which stops the charging process itself, which shows the Problem of Mobility with this method of wireless charging comes into play. Now, the answer to this problem is quite simple, and that is with the use of a Material, a special material, and the types of that being referred to as Meta-materials. Meta-materials are special materials, designed to have properties not found in any other modern material that would be found in Nature, and have a variety of properties when produced. Some of these materials have been known to have the ability to reflect electromagnetic waves, and reflect them completely, having no interaction with the Material itself what so ever (Institute of Physics, n.d.). This application of such Meta-materials has great application to solve the problem of mobility with wireless charging. Meta-materials can contain these properties, mainly due to the construction of there unit cells, which make up the fundamental structure of the material itself, and its properties, such as impedance, admittance, and reflective properties of the material. Impedance is the effect of electrical resistance on an electrical component when compared to the alternating current (Wikepedia, 2018), if one is present. The Reflective properties of the material mainly if the material doesn't absorb any of the Electromagnetic waves from the Quasi-static Magnetic field, but reflects them instead rather than absorbing the Electromagnetic waves from the Quasi-static magnetic field. A Meta-material itself, when they are made have something called a unit cell. A unit cell is what the meta-material makes up the design of the cells of the sheet of a meta material, with each space containing the unit cell itself, which is then typically inserted onto a slab of a material, with the unit cells of the Meta-material are placed on. Then, there is a concept known as Quasi-static Cavity Resonance. Quasi-static Cavity Resonance is a method that can be used to create near standing waves for a magnetic field inside a resonant structure, and resonant coupling to smaller receivers that can pick up the charge and are near the structure itself (Chabalko, M. J., Shahmohammadi, M., Sample, 2017).
+\linebreak
+My project mainly focuses on one thing, and that is making the process of wireless charging more efficient, and more applicable to be used as a main charging method for charging devices rather than a cord method. I did this by attempted to find a way using the concept of Quasi-static cavity resonance, and Quasi-static magnetic fields, to generate a magnetic field that can then be deflected by a set of meta-material reflectors. These Meta-material reflectors would then reflect any waves from the Quasi-static magnetic field, which would then be picked up by the receiver in a device in this case. Once the reflected wave off the meta-material reflector would be picked up by the receiver in the device, the device would charge due to this. The results I would be obtaining from the COSMOL Simulations would allow me to see the total absorption of the waves from the Quasi-static magnetic field that the meta-material had, and also the reflectance that the meta-material unit cell had, which in this case would be graphed in the form of a smith plot, which will be how that is graphed. In summary, my main goal with this project is to find a possibly more efficient method of wireless charging by using Quasi-static magnetic fields and meta-materials, to allow for wireless charging that truly allows for wireless charging on the mobile level that it was always meant to be at.  
 
-Wireless Charging, the Pinnacle of refueling devices, free of constraints, nothing holding the user back from being forced to charge with the length of cord limiting there freedom to move around while charging there device. But, a problem is present with Modern Wireless Charging in the current form that it is used in currently, and that is the need for a connection constantly to charge your device. The current method of wireless charging used today is known as Qi Charging. Qi Charging works with the wireless charging device having a built in copper coil. The Copper Coil is attached to the battery of the device, so current is put into the battery correctly while the device is charging. Power is transferred to the device through a Wireless Charging Pad, containing a Copper Coil inside the Pad. Transfer of Power is done between these two coils, using the coil inside the device as an inducting coil, and an alternating electromagnetic field is created. This field is the process responsible for allowing the wireless charging to occur in Qi Charging, and charge the device in Question. But, there is a problem with this process, and that is the lack of mobility, as when you place the device on the pad, you cannot under any circumstances remove it, as if you remove it from the pad, you lose the electromagnetic field that was made between the two coils, one in the pad and the device itself, which stops the charging process itself, which shows the Problem of Mobility with this method of wireless charging comes into play. Now, the answer to this problem is quite simple, and that is with the use of a Material, a special material, and the types of that being referred to as Meta-materials. Meta-materials are special materials, designed to have properties not found in any other modern material that would be found in Nature, and have a variety of properties when produced. Some of these materials have been known to have the ability to reflect electromagnetic waves, and reflect them completely, having no interaction with the Material itself what so ever. This application of such Meta-materials has great application to solve the problem of mobility with wireless charging. Meta-materials can contain these properties, mainly due to the construction of there unit cells, which make up the fundamental structure of the material itself, and its properties, such as impedance, admittance, and reflective properties of the material. Impedance is the effect of electrical resistance on an electrical component when compared to the alternating current, if one is present. The Reflective properties of the material mainly if the material doesn't absorb any of the Electromagnetic waves from the Quasi-static Magnetic field, but reflects them instead rather than absorbing the Electromagnetic waves from the Quasi-static magnetic field. A Meta-material itself, when they are made have something called a unit cell.
 \section{Methods and Materials} 
-Materials used in this project were quite minimal, due to the centralized nature of it heavily around simulations of the project, before any theoretical modeling was actually done. The start of the project involved me doing mathematical 
+Materials used in this project were quite minimal, due to the centralized nature of it heavily around simulations of the project, before any theoretical modeling was actually done. The start of the project involved me doing mathematical modeling for the theoretical part of this project, which saw me define the main elements of the project, such as the strength of the Quasi-static magnetic field, meta-material related parameters, and other components as well. All of the experimental work was done within the FEM Analysis software, COSMOL 5.2a, with the results from the simulation runs for certain components of the project being exported out for data collection. For finding the T-Test values, or any other statistical values of that matter, the use of python was employed with the help of the python module, \textit{PANDAS}, which is a python module that is used for the purpose of data science and statistics mainly.
+
 \subsection{Mathematical Modeling}
-Mathematical Modeling used within this project worked with many equations, but one of the main ones being for the modeling of the Quasi-static field coming from the main Quasi-static magnetic field generator itself. To define this "Generator" of the Quasi-static magnetic field, a Cylinder was designed for the theoretical model, which is for the cylinder, the length being symbolized by it being approximately equal to $\Delta$l, as shown here: $\Delta$l $\approx$ 2.4384 m. Visualizing this, a point of displacement for the field was defined to calculate the possible strength, with that point being defined as
-\subsection{Design of Meta-material Unit Cell}
-When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being defined as 
+Mathematical Modeling used within this project worked with many equations, but one of the main ones being for the modeling of the Quasi-static field coming from the main Quasi-static magnetic field generator itself. To define this Generator of the Quasi-static magnetic field, a Cylinder was designed for the theoretical model, which is for the cylinder, the length being symbolized by it being approximately equal to $\Delta$l, as shown here: $\Delta$l $\approx$ 2.4384 m. Visualizing this, a point of displacement for the field was defined to calculate the possible strength, with that point being defined as:
 \[ \rho =  \left(\begin{array}{c}
 x \\
 y \\
 z 
 \end{array}\right)\]
+with $\rho$ being the point of displacement being used for calculating the strength of the Quasi-static magnetic field at this point of displacement for calculating the strength of it. Along with this, when defined, a current direction is placed going up through the cylinder itself, being defined as $\vec{I}$, and this is repeated twice over the cylinder, the main generator that is, and an equation for this current and the current direction can be defined as:
+\[C = \vec{2I} + \vec{I}\]
+where \textbf{\textit{C}} in this equations is the sum of the vector directions for the current direction of $\vec{I}$. In the equation with $\vec{2I}$, that is defined as both of the current directions summed together, with the $\vec{I}$ being the individual current direction of $\vec{I}$ in the equation. The Purpose of the Equation here is mainly to define the total amount of current, being defined in mA, that being milliamperes, for the given equation, with the adding of the two being used to calculate the current going either in a negative direction into a negative quadrant of the 3D Coordinate plane, or the opposite, with the current going in a positive direction into a positive quadrant. Then, for calculating the point of displacement, and the strength of the Quasi-static Magnetic, use of Biots Savarts law, which is written as:
+\[B = \frac{\mu_0I}{4\pi} \]
+and then for use for the approximation with using the point of displacement to calculate the strength of the Quasi-static Magnetic Field, that can be defined as the following equation, which is: 
+\[\rho = x^2+y^2+z^2 \]
+with that to be used in the approximation, for calculating the point of displacement, and with that, we can define an equation for the point of displacement, and in turn the Quasi-static Magnetic field at the point we selected in this case, with this equation being defined as,
 
-with $\rho$ being the point of displacement being used for calculating the strength of the Quasi-static magnetic field at this point of displacement 
+\[B = \frac{\mu_0I}{4\pi} \cdot \frac{ \left(\begin{array}{c} 
+0 \\
+-\Delta\l \\
+0 
+\end{array}\right) \cdot \left(\begin{array}{c}
+x + \frac{\Delta\l}{2} \\
+\Delta{y}\ \\
+z
+\end{array}\right)}{((x + \frac{\Delta\l}{2}) ^ 2 + y^2 + z^2)^\frac{3}{2}} + \frac{\mu_0I}{4\pi}
+\linebreak
+\cdot \frac{\left(\begin{array}{c}
+\Delta\l \\
+0 \\
+0
+\end{array}\right) \cdot \left(\begin{array}{c}
+\Delta{x}\ \\
+y - \frac{\Delta\l}{2} \\
+z
+\end{array}\right)}{(x^2 + (y - \frac{\Delta\l}{2})^2 + z^2)^ \frac{3}{2}} + \]
+\[\frac{\mu_0I}{4\pi} 
+\cdot \frac{\left(\begin{array}{c}
+0 \\
+\Delta\l \\
+0
+\end{array}\right) \cdot \left(\begin{array}{c}
+x - \frac{\Delta\l}{2} \\
+-\Delta{y}\ \\
+z
+\end{array}\right)}{((x - \frac{\Delta\l}{2})^2 + (-\Delta{y})^2 + z^2)^\frac{3}{2}} + \frac{\mu_0I}{4\pi} \cdot \frac{\left(\begin{array}{c}
+-\Delta\l \\
+0 \\
+0
+\end{array}\right) \cdot \left(\begin{array}{c}
+-\Delta{x} \\ 
+y + \frac{\Delta\l}{2} \\
+z^2
+\end{array}\right)}{((-\Delta{x})^2 + (y - \frac{\Delta\l}{2})^2 + z^2)^\frac{3}{2}} + \frac{\mu_0I}{4\pi}\]
+Now, with the equation written above, it can be used to calculate the strength of the magnetic field at the displacement point selected, which is the point $\rho$, and using that point and the equation above, now that we have this equation for that point, and the calculations for the point and the distance to it, which were all calculated here in this case to be constant. Next we have the use of discrete capacitors, which are within the center of the cylinder, below is an example of this, all of the discrete capacitors in the center for the mathematical model is down below: 
+\linebreak
+\linebreak
+\begin{tikzpicture}
+\draw (2,3) ellipse (0cm and 0cm);
+\draw(8,0) circle(3 cm);
+\draw(8,0.1) circle(0.35cm) node{$H$};
+\draw(5.5,0.15) circle(0.35 cm) node{$H_-$};
+\draw(5.8,1.3) circle(0.35 cm) node{$H_+$};
+\draw(5.8,-0.95) circle(0.35 cm) node{$H_+$};
+\draw(6.5, -1.9) circle(0.35 cm) node{$H_-$};
+\draw(6.5, 2.1) circle(0.35 cm) node{$H_-$};
+\draw(9.4, 2.05) circle(0.35 cm) node {$H_-$};
+\draw(8, 2.5) circle(0.35 cm) node{$H_+$};
+\draw(7.94, -2.5) circle(0.35 cm) node{$H_+$};
+\draw(9.4, -2.05) circle(0.35 cm) node{$H_-$};
+\draw(10.15, -1) circle(0.35 cm) node{$H_+$};
+\draw(10.13, 1.2) circle(0.35 cm) node{$H_+$};
+\draw(10.4, 0.1) circle(0.35 cm) node{$H_-$};
+\end{tikzpicture}
+\linebreak
+\linebreak
+Here, with the diagram of the discrete capacitors, there is one thing that is not known, and that is the dielectrics of each discrete capacitor. For this, an equation can be used, with finding the dielectrics for each capacitor, and then the capacitance of each capacitor. For this, we can start with the following equation that uses Coulombs constant,
+
+\[V = \frac{\lambda}{4\pi\epsilon_o} \int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt\]
+with $V$ being the dielectrics of the discrete capacitors, what it is defined as mainly. Then with the current going out, defined as \textit{out}, being integrated over the current going in, being defined as \textit{in}, and that current direction going through the discrete capacitors, being defined as $\vec{H}$, the current direction and current, is defined as $\vec{\mu}$, with $r^2$ being the $\vec{r}$ coming from the center discrete capacitor that is neither positive or negatively charged. Now with this equation, we can find with the equation being used from above 
+\[V =\frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt\]
+and then find with making the $\vec{H}$ into an integral for the + and - charge of each of the capacitors in the diagram shown of the discrete capacitors in the generator, the equation then becomes,
+\[V = \int_{H_-}^{H_+} \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot dt\]
+with this new equation, use $dt$ as the derivative we integrate the integral $\int_{H_-}^{H_+}$ using this derivative, the equation then becomes,
+\[V = \frac{-\lambda}{4\pi\epsilon_o} \int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot \biggr|_{H_{-}}^{H_{+}}\]
+with the differential $dt$ removed, and used to integrate the integral $\int_{H_-}^{H_+}$, it can the equation can then become,
+\[V = \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}\]
+Now, with this new equation found, we can then turn the integral $\int_{in}^{out}$ into a natural logarithm, which when symbolized is $ln$, which then gives us the equation
+\[V = \frac{\lambda}{4\pi\epsilon_o} \cdot \ln(\frac{out}{in})\frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}\]
+due to the presence of the new natural logarithm, $ln$, replacing the integral from the equation before where there was still the integral $\int_{int}^{out}$, which is now the natural logarithm $ln(\frac{out}{in})$. Then, to remove $r^2$ from the equation, we derive it out and have the new equation of, 
+\[V = \frac{\lambda}{4\pi\epsilon_o} \ln(\frac{out}{in})\vec{H}(+)(-)\cdot \vec{\mu}\]
+With the equation for the dielectrics of the capacitors now found, to find the total possible capacitance of each capacitor, the law of capacitance can be used to do this, with the equation for that law being,
+\[C = \frac{Q}{V} \]
+where $C$ is the total capacitance, which is divided by V, the dielectric of the capacitor in this case, using the capacitance law, we can substitute $Q$ for $\lambda$ in the equation  where $r^2$ is removed, which gives us the equation of,
+\[V = \frac{Q}{4\pi\epsilon_o\mu}\ln(\frac{out}{in})\vec{H}(+)(-)\]
+where $\vec{\mu}$ is carried over and added to the Coulombs constant for the equation, which makes it $V = \frac{Q}{4\pi\epsilon_o\mu}$ due to that. Then, using the law of capacitance, which is $C = \frac{Q}{V}$, and substitute the results we have for $V$, we get the equation of,
+\linebreak
+\[C = \frac{Q}{\frac{Q}{4\pi\epsilon_o\mu}}\ln(\frac{out}{in})\vec{H}(+)(-)\]
+with this equation, when we remove $Q$ from the equation and divide it out from the nested fraction of the equation, we get the final equation of,
+\[C = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}\vec{H}(+)(-)\]
+we then have the final equation for the total capacitance of each discrete capacitor within the diagram shown earlier in this section. With the total capacitance found for each of the discrete capacitors, we can then go onto finding the total possible energy stored in each discrete capacitor. For this, we can start out by defining the differential, $dQ$, which can be defined as $dQ$ = capacitance of a given capacitor for this function. With this differential, we can define this by placing one of the capacitor onto a 3d coordinate plane, as shown here within the diagram,
+\linebreak
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
+\draw[->] (xyz cs:x=-13.5) -- (xyz cs:x=13.5) node[above] {$x$};
+\draw[->] (xyz cs:y=-13.5) -- (xyz cs:y=13.5) node[right] {$z$};
+\draw[->] (xyz cs:z=-13.5) -- (xyz cs:z=13.5) node[above] {$y$};
+\foreach \coo in {-13,-12,...,13}
+{
+	\draw (\coo,-1.5pt) -- (\coo,1.5pt);
+	\draw (-1.5pt,\coo) -- (1.5pt,\coo);
+	\draw (xyz cs:y=-0.15pt,z=\coo) -- (xyz cs:y=0.15pt,z=\coo);
+}
+\foreach \coo in {-10,-5,5,10}
+{
+	\draw[thick] (\coo,-3pt) -- (\coo,3pt) node[below=6pt] {\coo};
+	\draw[thick] (-3pt,\coo) -- (3pt,\coo) node[left=6pt] {\coo};
+	\draw[thick] (xyz cs:y=-0.3pt,z=\coo) -- (xyz cs:y=0.3pt,z=\coo) node[below=8pt] {\coo};
+}
+\draw (0,3) ellipse (2 and 0.5);
+\draw (-2,3) -- (-2,-3);
+\draw (-2,-3) arc (180:360:2 and 0.5);
+\draw [dashed] (-2,-3) arc (180:360:2 and -0.5);
+\draw (2,-3) -- (2,3);  
+\fill [gray,opacity = 0.85] (-2,3) -- (-2,-3) arc (180:360:2 and 0.5) -- (2,3) arc (0:180:2 and -0.5);
+\draw (0,0) circle(0 cm) node{$R$};
+\draw[fill](7,0) circle(0.1cm);
+\draw(9,0.5) circle (0 cm) node{$dEy$};
+\draw[fill](-2, 3) circle (0.1 cm);
+\draw(-2, 3.5) circle (0 cm) node{$dQ$};
+\draw[|->, thick, black](7,0) -- (11, -3);
+\draw[|->, very thick, black](7,0) -- (11,0);
+\draw(8, -2) circle (0 cm) node{$dE$};
+\draw[ultra thick]
+(9.5,0) to [out=270,in=240](9,-1.31);
+\draw(8.5, -0.5) circle (0 cm) node{$\theta$};
+\draw[dashed] (-2,3)--(7,0);
+\draw(4.5, 1.5) circle (0 cm) node{$\vec{OL}$};
+\draw(3.5, -1.5) circle (0 cm) node{$(a)$};
+\draw[fill](3.5,0) circle(0.1 cm);
+\draw[ultra thick]
+(0,0) to [out = -90, in = -83](3.5,0);
+\draw[ultra thick] 
+(3.5,0) to [out = -90, in = -83](7,0);	
+\end{tikzpicture}
+\linebreak
+\linebreak
+The Diagram above shows a single discrete capacitor, which will be defined by the cylinder in this diagram, which will be defining the discrete capacitor in this case, with then a center point, $R$, being used as well. For this next equation, $R$ will be defined as $R^2$, to be used in the next equation. With the diagram above now drawn, we can now define an equation for this diagram containing this discrete capacitor, and use the differential, $dE$, with that, we can then write the equation for this diagram, which is
+\begin{equation}
+dE = \frac{k(\frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})})}{(R^2+a^2) + (x^2 - \Delta{y}^2+0)}
+\end{equation}
+with this equation now defined for telling us the total energy that could be stored in each discrete capacitor, and with $dE$ being that differential that tells us this, and when we defined the differential $dQ$, which is defining the charge differential for the discrete capacitor. We can also set $dQ$ to be equal to $C$ from the last equation, which we used for finding the total capacitance of each capacitor, and use that value and set it equal to the charge differential $dQ$, which gives us, 
+\linebreak
+\[dQ = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}\]
+now that we have the charge differential, $dQ$, set equal to the value of $\frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}$ for the charge differential value, the equation can then become,
+\begin{equation}
+dE = \frac{kdQ}{(R^2 + a^2) + (x^2 - \Delta{y}^2+0)} 
+\end{equation}
+with setting the value of $dQ = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}$, the equation has become more simplified as a result for finding the total energy in each discrete capacitor. With this now done, we can then add in something to define for the $\theta$ angle symbol we have in this diagram. Once we do this, the equation then becomes,
+\begin{equation}
+dE = \frac{kdQ}{(R^2+a^2) + (x^2 - \Delta{y}^2 + 0)} \cos\theta
+\end{equation}
+where $\cos\theta$ is defined as the angle between the differential vectors $\vec{dEy}$ and $\vec{dE}$, and the angle, in this $\theta$, being defined as $\cos\theta$ in the equation due to that. Now, taking the equation, and using $\cos\theta$ to split the equation, we can find the equation to now be, 
+\begin{equation}
+dE = \frac{kdQ}{(R^2 + a^2)} \frac{a}{(R^2+a^2)^\frac{1}{2}}\frac{kdQ}{(x^2-\Delta{y}^2+0)}
+\end{equation}
+with the equation now split up into different fractions, we can now eliminate the variable, $a$, and we can now eliminate that by dividing out $a$, which gives us the new equation of,
+\begin{equation}
+dE = \frac{kdQ}{(R^2+a^2)^\frac{3}{2}} a(x^2-\Delta{y}^2+0)
+\end{equation}
+with the variable, $a$ now removed out of the equation, we can then integrate the differential, $dE$, which is the total of energy of a discrete capacitor, and once we integrate $dE$, the equation then becomes, 
+\begin{equation}
+E = \int \frac{akdQ}{(R^2+a^2)^\frac{3}{2}} (x^2 - \Delta{y}^2 + 0)
+\end{equation}
+with the integral now defined, using the previous differential, $dE$ to integrate the equation, we can then use the differential for charge, $dQ$, and use that to integrate the rest of the equation, and put $dQ$ in place of the equation $(x^2-\Delta{y}^2+0)$, and doing this, we get the equation of,
+\begin{equation}
+E = \frac{ka}{(R^2+a^2)^\frac{3}{2}} \int dQ
+\end{equation}
+with the differential of charge being integrated, that being the differential coefficient $dQ$, we can that integrate that and remove it to get the equation of
+\begin{equation}
+E = \frac{kQa}{(R^2+a^2)^\frac{3}{2}}
+\end{equation}
+the equation above being the final equation for the total energy, $E$, that is present within each capacitor, can be described as the following statement, with that being as,
+\begin{equation}
+R \rightarrow 0, E \approx \frac{kQ}{a^2}
+\end{equation}
+with the rule above essentially states is that as the radius of each discrete capacitor is limited to be 0 for the radius, the energy in that discrete capacitor can be found as $E \approx \frac{kQ}{a^2}$, which is the equation that can be used to find the total energy in that discrete capacitor given for any radius of that discrete capacitor as well. With this now found, we now know the total energy of the discrete capacitors, and the capacitance of each discrete capacitor, we can now move onto finding the curl of the Quasi-static Magnetic field inside the Quasi-static Magnetic Field Generator. We can first start out by using the $\vec{E}$ fields of the Quasi-static magnetic field generator, and use the equation below, to then expand into a series of curl equations to use later, but the rule that will be used for this will be the following equation,
+\begin{equation}
+\vec{D} = [\epsilon]\vec{E}
+\end{equation}
+as the equation we will be using to expand and then define the curl equations for the $\vec{E}$ fields, and the $\vec{D}$ fields as well. Now that we have this equation however, we can then expand that equation into the following equation which will be used to find the curl of the $\vec{E}$ fields, and that equation is,
+\[D_x \hat{a}_x + D_y \hat{a}_y + D_z \hat{a}_z = (\epsilon_{xx} E_x + \epsilon_{xy}E_y + \epsilon_{xz}E_z)\hat{a}x+(\epsilon_{yx}E_x + \epsilon_{yy}E_y + \epsilon_{yz}E_z) \]
+\[\hat{a}y + (\epsilon_{zx}E_x + \epsilon_{zy}E_y + \epsilon_{zz}E_z)\hat{a}z\]
+\linebreak
+with this equation now defined for the curl of the vector fields of the Quasi-static magnetic field from the Quasi-static magnetic field generator, we can then use the equation that we defined for expanding the curl equations, and set each tensor value for each value of $\vec{D}$, which gives us the equations of,
+\begin{equation}
+\begin{array}{c}
+D_x = \epsilon_{xx} E_x + \epsilon_{xy}E_y + \epsilon_{xz}E_z\\
+D_y = \epsilon_{yx} E_x + \epsilon_{yy}E_y + \epsilon_{yz}E_z \\
+D_z = \epsilon_{zx} E_x + \epsilon_{zy}E_y + \epsilon_{zz}E_z
+\end{array}
+\end{equation}
+these equations are mainly for defining the equation given for Equation (10), in which $\vec{D} = [\epsilon] \vec{E}$, which is defined with the above equations, with each equation equaling a specific set of tensors relating to $x, y, z$ and those relating to $\epsilon$ in the equations given above. Now, we can also do this with the $\vec{B}$ fields, and for this, we can use a new equation rule, with that being the equation,
+\begin{equation}
+\vec{B} = [\mu]\vec{H}
+\end{equation}
+with $\vec{B}$ in the above equation, represents the $B$ fields of the Quasi-static Magnetic field generator, with $\vec{H}$ representing the $H$ fields of the Quasi-static magnetic field generator, and $\mu$ being used for the symbolizing of tensors in this equation. With this equation used, we can then write the new equation of,
+\[B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z\]
+with the adding of the $\vec{H}$ fields into the equation, we get the new equation of,
+\[B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z = (\mu_{xx}H_x+\mu_{xy}H_y + \mu_{xz}H_z)\hat{a}_x + (\mu_{yx}H_x + \mu_{yy}H_y + \mu_{yz}H_Z)\]
+\[\hat{a}_y + (\mu_{zx}H_x + \mu_{zy}H_y+ \mu_{zz}H_z)\hat{a}_z\]
+with this equation now found for the $\vec{B}$ and $\vec{H}$ fields, using the equation 12, we can find a similar result to equation 11 by splitting $\vec{B}$ into a set of tensors, each for $x,y,z$, we can get the set of equations of,
+\begin{equation}
+\begin{array}{c}
+B_x = \mu_{xx}H_x + \mu_{xy}H_y + \mu_{xz}H_z \\
+B_y = \mu_{yx}H_x + \mu_{yy}H_y + \mu_{yz}H_z \\
+B_z = \mu_{zx}H_x + \mu_{zy}H_y + \mu_{zz}H_z
+\end{array}
+\end{equation}
+with the above equations now defined, which used equation 12 to do so, we now have a similar result to that of equation 10, in which $\vec{D} = [\epsilon]\vec{E}$, but here, and the set of the above equations, the equation $\vec{B} = [\mu]\vec{H}$ for the making of the above equations, and used each set of proper tensors for the above equation as well for each component, that being $x,y,z$ in this case. With this now done, we can then define the divergence of the Quasi-static Magnetic Field that is inside the Quasi-static magnetic field generator. We can start this out by defining the following equation, which uses $\vec{E}$ to start the equation, with that equation being,
+\begin{equation}
+\nabla \cdot \vec{E} = -\frac{\partial{\vec{B}}}{\partial{t}}
+\end{equation}
+where $\nabla$ is the divergence of the $\vec{E}$ fields, being set equal to the $\partial{\vec{B}}$, that being the partial derivative of the $\vec{B}$ fields divided by a partial derivative for time, that being $\partial{t}$ in this case for the equation. With this equation now defined, we can then expand that divergence equation into the following equation defined below,
+\linebreak
+\begin{equation}
+(\frac{\partial{E}_y}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{x}} - \frac{\partial{E}_z}{\partial{x}}) \hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z
+\end{equation}
+with this equation now defined, and using the partial time derivative from equation 14, that being $-\partial{t}$, we can then use that partial time derivative and set that as $-\frac{\partial}{\partial{t}}$, and then with that defined, equation 15 then becomes,
+\linebreak
+\[(\frac{\partial{E}_y}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{x}} - \frac{\partial{E}_z}{\partial{x}}) \hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z = -\frac{\partial}{\partial{t}}(B_x\hat{a}_x+B_y\hat{a}_y +B_z\hat{a}_z)\]
+in which we have equation 15 set equal to the partial time derivate with all the necessary components of the $\vec{B}$ fields included with the equation as well, and when we factor out the components of the $\vec{B}$ fields to obtain partial derivatives for those components, we get the equation of,
+\begin{equation}
+-\frac{\partial{B}_x}{\partial{t}}\hat{a}_x - \frac{\partial{B}_y}{\partial{t}}\hat{a}_y - \frac{\partial{B}_z}{\partial{t}}\hat{a}_z
+\end{equation}
+with that equation now defined for each component broken up into the partial derivatives, each one being used for either $x,y,z$ components of the $\vec{B}$ fields, we can take the hat components for each of the equations from equation set 15, and make the new set of equations that can be found to be,
+\[\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\frac{\partial{B}_x}{\partial{t}}\]
+\[\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\frac{\partial{B}_y}{\partial{t}}\]
+\[\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\frac{\partial{B}_z}{\partial{t}}\]
+\linebreak
+with these equations defined for each hat component defined by for each part of the $\vec{B}$ field, and those hat component being $\hat{a}_x, \hat{a}_y, \hat{a}_z$ for those components of the $\vec{B}$ fields, being set equal to 
+\subsection{Design of Meta-material Unit Cell}
+When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$.
+
 \subsection{COSMOL Simulations}
-For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, with those parameters being 
+For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and 
 
 \section{Data Collection}
 Collection of data was done mainly with the harvesting of data from COSMOL, and taking the data that obtained from the COSMOL Simulations. These data-sets were about 5 sets of data in total, but totaling for the lowest data-set with about 300 points of data within that smallest data-set, and nearly 14000 in other data-sets as well.
 
 \section{Results}
-Results from my data were mainly collected through COSMOL once the simulations were complete, and were broken up into .txt files, which then were imported into Google sheets for formatting the file properly, and then downloading the .csv file from google sheets and inputting that into a Python Program I made that would be able to tell me the T-Test results needed, along with other statistical tests as well. The First set of data collected was for the Normal of the electric field that would be generated from the Quasi-static magnetic field
+Results from my data were mainly collected through COSMOL once the simulations were complete, and were broken up into .txt files, which then were imported into Google sheets for formatting the file properly, and then downloading the .csv file from Google sheets and inputting that into a Python Program I made that would be able to tell me the T-Test results needed, along with other statistical tests as well. The First set of data collected was for the Normal of the electric field that would be generated from the Quasi-static magnetic field, with those results being divided into three columns, those being 
+
 \section{Discussion}
+Some of the major findings I had in this project while doing it were not significant mostly, but, some findings did stand out to me.
 
 \section{Conclusion}
+Conclusively, for my project, the results I obtained, the mathematical modeling done, and the COSMOL simulations that were done for this project, brought me to my final conclusion. This
 
 \section{Acknowledgments}
-Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsboury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COSMOL, and along with this me doing Mathematical modeling of it as well.  
+Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COSMOL, and along with this me doing Mathematical modeling of it as well.  
+
 \section{Appendix}
+This is filler text and will be used later on.
 
-\section{Sources}
-\bibliography{JuniorResearchPaperRoughDraft}
+\begin{thebibliography}{9}
+	\bibitem{Computerworldarticle}
+Wireless charging explained: What is it and how does it work?
+\texttt{https://www.computerworld.com/article/3235176/mobile-wireless/
+	wireless-charging-explained-what-is-it-and-how-does-it-work.html}
+	\bibitem{Metamaterialsource}
+Metamaterials, "After another news story about a “Harry Potter invisibility cloak”, we take a look at the science behind metamaterials".
+\texttt{http://www.iop.org/resources/topic/archive/metamaterials/}
+	\bibitem{Impedance}
+Electrical impedance
 
+\texttt{https://en.wikipedia.org/wiki/Electrical/impedance}	
+	\bibitem{Quasistatic Cavity Resonance}
+Quasistatic Cavity Resonance for Ubiquitous Wireless Power Transfer
+\texttt{https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0169045}
+\end{thebibliography}
 
 \end{document}
