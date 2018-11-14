@@ -1,10 +1,16 @@
 \documentclass[]{article}
 \usepackage{tikz}
+\usepackage{geometry}[margins = 0.5 in]
 \usepackage{graphicx}
 \usetikzlibrary{arrows}
 \usepackage{float}
 \usetikzlibrary{arrows.meta}
-
+\graphicspath{ {c:/user/lolzk/S Parameter Graph 1D} }
+\graphicspath{ {c:/user/lolzk/Smith Plot for Reflection} }
+\graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image2} }
+\graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image} }
+\graphicspath{ {c:/user/lolzk/Quasistatic Magnetic Field Vector Direction Graph Images} }
+\graphicspath{ {c:/user/lolzk/OneD Electric Field Normal Graph Image} }
 \title{Using Quasi-static Magnetic Fields and Meta-material Amplifiers to allow for Ubiquitous Wireless Charging}
 \author{Jordan Hill \\ David Stover}
 
@@ -22,7 +28,7 @@ Quasi-static Magnetic fields are Electromagnetic fields that are created from Qu
 
 Wireless Charging, the Pinnacle of refueling devices, free of constraints, nothing holding the user back from being forced to charge with the length of cord limiting there freedom to move around while charging there device. But, a problem is present with Modern Wireless Charging in the current form that it is used in currently, and that is the need for a connection constantly to charge your device. The current method of wireless charging used today is known as Qi Charging. Qi Charging works with the wireless charging device having a built in copper coil. The Copper Coil is attached to the battery of the device, so current is put into the battery correctly while the device is charging. Power is transferred to the device through a Wireless Charging Pad, containing a Copper Coil inside the Pad. Transfer of Power is done between these two coils, using the coil inside the device as an inducting coil, and an alternating electromagnetic field is created. This field is the process responsible for allowing the wireless charging to occur in Qi Charging, and charge the device (Mearin, 2018). But, there is a problem with this process, and that is the lack of mobility, as when you place the device on the pad, you cannot under any circumstances remove it, as if you remove it from the pad, you lose the electromagnetic field that was made between the two coils, one in the pad and the device itself, which stops the charging process itself, which shows the Problem of Mobility with this method of wireless charging comes into play. Now, the answer to this problem is quite simple, and that is with the use of a Material, a special material, and the types of that being referred to as Meta-materials. Meta-materials are special materials, designed to have properties not found in any other modern material that would be found in Nature, and have a variety of properties when produced. Some of these materials have been known to have the ability to reflect electromagnetic waves, and reflect them completely, having no interaction with the Material itself what so ever (Institute of Physics, n.d.). This application of such Meta-materials has great application to solve the problem of mobility with wireless charging. Meta-materials can contain these properties, mainly due to the construction of there unit cells, which make up the fundamental structure of the material itself, and its properties, such as impedance, admittance, and reflective properties of the material. Impedance is the effect of electrical resistance on an electrical component when compared to the alternating current (Wikepedia, 2018), if one is present. The Reflective properties of the material mainly if the material doesn't absorb any of the Electromagnetic waves from the Quasi-static Magnetic field, but reflects them instead rather than absorbing the Electromagnetic waves from the Quasi-static magnetic field. A Meta-material itself, when they are made have something called a unit cell. A unit cell is what the meta-material makes up the design of the cells of the sheet of a meta material, with each space containing the unit cell itself, which is then typically inserted onto a slab of a material, with the unit cells of the Meta-material are placed on. Then, there is a concept known as Quasi-static Cavity Resonance. Quasi-static Cavity Resonance is a method that can be used to create near standing waves for a magnetic field inside a resonant structure, and resonant coupling to smaller receivers that can pick up the charge and are near the structure itself (Chabalko, M. J., Shahmohammadi, M., Sample, 2017).
 \linebreak
-My project mainly focuses on one thing, and that is making the process of wireless charging more efficient, and more applicable to be used as a main charging method for charging devices rather than a cord method. I did this by attempted to find a way using the concept of Quasi-static cavity resonance, and Quasi-static magnetic fields, to generate a magnetic field that can then be deflected by a set of meta-material reflectors. These Meta-material reflectors would then reflect any waves from the Quasi-static magnetic field, which would then be picked up by the receiver in a device in this case. Once the reflected wave off the meta-material reflector would be picked up by the receiver in the device, the device would charge due to this. The results I would be obtaining from the COSMOL Simulations would allow me to see the total absorption of the waves from the Quasi-static magnetic field that the meta-material had, and also the reflectance that the meta-material unit cell had, which in this case would be graphed in the form of a smith plot, which will be how that is graphed. In summary, my main goal with this project is to find a possibly more efficient method of wireless charging by using Quasi-static magnetic fields and meta-materials, to allow for wireless charging that truly allows for wireless charging on the mobile level that it was always meant to be at.  
+My project mainly focuses on one thing, and that is making the process of wireless charging more efficient, and more applicable to be used as a main charging method for charging devices rather than a cord method. I did this by attempted to find a way using the concept of Quasi-static cavity resonance, and Quasi-static magnetic fields, to generate a magnetic field that can then be deflected by a set of meta-material reflectors. These Meta-material reflectors would then reflect any waves from the Quasi-static magnetic field, which would then be picked up by the receiver in a device in this case. Once the reflected wave off the meta-material reflector would be picked up by the receiver in the device, the device would charge due to this. The results I would be obtaining from the COSMOL Simulations would allow me to see the total absorption of the waves from the Quasi-static magnetic field that the meta-material had, and also the reflectance that the meta-material unit cell had, which in this case would be graphed in the form of a smith plot, which will be how that is graphed. In summary, my main goal with this project is to find a possibly more efficient method of wireless charging by using Quasi-static magnetic fields and meta-materials, to allow for wireless charging that truly allows for wireless charging on the mobile level that it was always meant to be at. The Main Hypothesis I have about my results are that they will show the method of using meta-materials as a method to allow for wireless charging at a level where you don't have to worry about it always being connected to a pad, and with the use of Quasi-static magnetic fields will be a very efficient process to allow wireless charging at truly mobile distances like it should be.
 
 \section{Methods and Materials} 
 Materials used in this project were quite minimal, due to the centralized nature of it heavily around simulations of the project, before any theoretical modeling was actually done. The start of the project involved me doing mathematical modeling for the theoretical part of this project, which saw me define the main elements of the project, such as the strength of the Quasi-static magnetic field, meta-material related parameters, and other components as well. All of the experimental work was done within the FEM Analysis software, COSMOL 5.2a, with the results from the simulation runs for certain components of the project being exported out for data collection. For finding the T-Test values, or any other statistical values of that matter, the use of python was employed with the help of the python module, \textit{PANDAS}, which is a python module that is used for the purpose of data science and statistics mainly.
@@ -41,7 +47,6 @@ where \textbf{\textit{C}} in this equations is the sum of the vector directions 
 and then for use for the approximation with using the point of displacement to calculate the strength of the Quasi-static Magnetic Field, that can be defined as the following equation, which is: 
 \[\rho = x^2+y^2+z^2 \]
 with that to be used in the approximation, for calculating the point of displacement, and with that, we can define an equation for the point of displacement, and in turn the Quasi-static Magnetic field at the point we selected in this case, with this equation being defined as,
-
 \[B = \frac{\mu_0I}{4\pi} \cdot \frac{ \left(\begin{array}{c} 
 0 \\
 -\Delta\l \\
@@ -248,12 +253,10 @@ with the above equations now defined, which used equation 12 to do so, we now ha
 \nabla \cdot \vec{E} = -\frac{\partial{\vec{B}}}{\partial{t}}
 \end{equation}
 where $\nabla$ is the divergence of the $\vec{E}$ fields, being set equal to the $\partial{\vec{B}}$, that being the partial derivative of the $\vec{B}$ fields divided by a partial derivative for time, that being $\partial{t}$ in this case for the equation. With this equation now defined, we can then expand that divergence equation into the following equation defined below,
-\linebreak
 \begin{equation}
 (\frac{\partial{E}_y}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{x}} - \frac{\partial{E}_z}{\partial{x}}) \hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z
 \end{equation}
 with this equation now defined, and using the partial time derivative from equation 14, that being $-\partial{t}$, we can then use that partial time derivative and set that as $-\frac{\partial}{\partial{t}}$, and then with that defined, equation 15 then becomes,
-\linebreak
 \[(\frac{\partial{E}_y}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{x}} - \frac{\partial{E}_z}{\partial{x}}) \hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z = -\frac{\partial}{\partial{t}}(B_x\hat{a}_x+B_y\hat{a}_y +B_z\hat{a}_z)\]
 in which we have equation 15 set equal to the partial time derivate with all the necessary components of the $\vec{B}$ fields included with the equation as well, and when we factor out the components of the $\vec{B}$ fields to obtain partial derivatives for those components, we get the equation of,
 \begin{equation}
@@ -263,33 +266,304 @@ with that equation now defined for each component broken up into the partial der
 \[\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\frac{\partial{B}_x}{\partial{t}}\]
 \[\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\frac{\partial{B}_y}{\partial{t}}\]
 \[\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\frac{\partial{B}_z}{\partial{t}}\]
+with these equations defined for each hat component defined by for each part of the $\vec{B}$ field, and those hat component being $\hat{a}_x, \hat{a}_y, \hat{a}_z$ for those components of the $\vec{B}$ fields, being set equal to the components of the $\vec{E}$ fields, with those being from the $\vec{E}$ fields, and being set equal to each partial derivative for the $\vec{B}$ fields, along with each hat component, giving us the three equations above. Once this is done, we can also do this for the $\vec{H}$ fields as well, with the included components that are new within the following equation,
+\[\nabla \cdot \vec{H} = \vec{J} + \frac{\partial{\vec{D}}}{\partial{t}}\]
+in which we have the vector, $H$, being set being multiplied by $\nabla$, in which we have the divergence being calculated for the $H$ fields, and then when we expand the equation, we can get the new equation of,
 \linebreak
-with these equations defined for each hat component defined by for each part of the $\vec{B}$ field, and those hat component being $\hat{a}_x, \hat{a}_y, \hat{a}_z$ for those components of the $\vec{B}$ fields, being set equal to 
+\begin{equation}
+(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{z}} - \frac{\partial{H}_z}{\partial{y}})\hat{a}_z
+\end{equation}
+with this new equation, and the expanded results of the $\vec{H}$ from that divergence equation, we can now do something similar that we did to the last set of equations, and expand the elements for $\vec{J} + \frac{\partial{\vec{D}}}{\partial{t}}$ , and expand this element of the equation for finding the divergence of the $\vec{H}$ fields, and get the new equation of,
+\begin{equation}
+(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{z}} - \frac{\partial{H}_z}{\partial{y}})\hat{a}_z = (J_x\hat{a}_x + J_y\hat{a}_y + J_z\hat{a}_z)
+\end{equation}
+now with the $\vec{J}$ components added to the equation, once we take the time partial derivative used, that being $\partial{t}$ and expand that and add it into the equation, we get the new equation of,
+\begin{equation}
+(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{z}} - \frac{\partial{H}_z}{\partial{y}})\hat{a}_z = (J_x\hat{a}_x + J_y\hat{a}_y + J_z\hat{a}_z) + \frac{\partial}{\partial{t}}(D_x\hat{a}_x+D_y\hat{a}_y+D_z\hat{a}_z
+\end{equation}
+with these elements of the divergence equation now expanded from the original divergence equation we had for the $\vec{H}$ fields, we can then set each hat component for $\hat{a}$, that being the components $\hat{a}_x,\hat{a}_y,\hat{a}_z$, and once this is done, we get the new set of equations for this, which are down below and shown down below,
+\[\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = J_x + \frac{\partial{D}_x}{\partial{t}} \] 
+\[\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = J_y + \frac{\partial{D}_y}{\partial{t}} \]
+\[\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = J_z + \frac{\partial{D}_z}{\partial{t}} \]
+in which we have each component of the expanded $\vec{H}$ field equations set equal to each $x,y,z$ components for solving for the divergence for the $\vec{H}$ fields. Now, we can also have an alternative form of this Divergence equation, which I shall first show with the $\vec{H}$ fields, which shall show the alternate form of the divergence equations, as I shall now show below,
+\begin{equation}
+\nabla \cdot \vec{H} = [\epsilon] \frac{\partial{\vec{E}}}{\partial{t}}
+\end{equation}
+in which we have the $\vec{H}$ having the divergence calculated for, but this time being set equal to a partial derivative of the $\vec{E}$ fields being divided by a time derivative, and when the above equation is expanded, we get the new equation of,
+\begin{equation}
+(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}})\hat{a}_z
+\end{equation}
+while this result is similar to the divergence equations with the $\vec{H}$ fields, once we expanded what $\nabla \cdot \vec{H}$ is set equal to, we get the new equation of,
+\[(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}})\hat{a}_z = (\epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_x +\]
+\[(\epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_y + (\epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_z\]
+with this now expanded, we can then assign each of the expanded $\vec{H}$ field equations to there set of hat values that they have surrounding them, we get the new set of equations once this is done, with each of the properly expanded equations being done,
+\[\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = \epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}} \]
+\[\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = \epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}} \]
+\[\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = \epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}}\]
+and with this new set of equations that are set equal to each of the hat components for this expanded Divergence equation that we used for the $\vec{H}$ fields. We can also do this for an alternate form of calculating the divergence as well, with substituting in $\mu$ for $\epsilon$, and making that negative, and swapping the places of $\vec{H}$ and $\vec{E}$ to obtain the new equation of,
+\begin{equation}
+\nabla \cdot \vec{E} = -[\mu] \frac{\partial{\vec{H}}}{\partial{t}}
+\end{equation}
+with this new equation now written for calculating the divergence of the $\vec{E}$ fields, we can then expand that element to get the new set of equations once expanded, which are down below,
+\begin{equation}
+{(\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z}
+\end{equation}
+and once we expand the elements of what $\nabla \cdot \vec{E}$ is set equal to, and once those elements are expanded, we get the new equation of,
+\[(\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}})\hat{a}_x - (\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}})\hat{a}_y - (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z = 
+-(\mu_{xx}\frac{\partial{H}_x}{\partial{t}} - \mu_{xy}\frac{\partial{H}_y}{\partial{t}} - \mu_{xz}\frac{\partial{H}_z}{\partial{t}})\hat{a}_x -\]
+\[(\mu_{yx}\frac{\partial{H}_x}{\partial{t}} - \mu_{yy}\frac{\partial{H}_y}{\partial{t}} - \mu_{yz}\frac{\partial{H}_z}{\partial{t}})\hat{a}_y - (\mu_{zx}\frac{\partial{H}_x}{\partial{t}} - \mu_{zy}\frac{\partial{H}_y}{\partial{t}} - \mu_{zz}\frac{\partial{H}_z}{\partial{t}})\hat{a}_z\]
+in which we have all the elements of equation 22, and once we set all of the values of $\nabla \cdot \vec{E}$ set equal to there proper hat components, we get the new equations that are all set equal to there proper hat components,
+\begin{equation}
+\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\mu_{xx}\frac{\partial{H}_x}{\partial{t}} - \mu_{xy}\frac{\partial{H}_y}{\partial{t}} - \mu_{xz}\frac{\partial{H}_z}{\partial{t}} 
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\mu_{yx}\frac{\partial{H}_x}{\partial{t}} - \mu_{yy}\frac{\partial{H}_y}{\partial{t}} - \mu_{yz}\frac{\partial{H}_z}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\mu_{zx}\frac{\partial{H}_x}{\partial{t}} - \mu_{zy}\frac{\partial{H}_y}{\partial{t}} - \mu_{zz}\frac{\partial{H}_z}{\partial{t}}
+\end{equation}
+with this, we now have the properly expanded elements of the alternate divergence equation for the expanded elements equal to the proper hat elements of the expanded Divergence equation. Now, for modeling the Quasi-static Magnetic field, we can use something called \textbf{FDTD}, or otherwise known as \textit{Finite Difference Time Domain}, which we can use to model the to model the directions of the $\vec{E}$ fields, and also use this to first define the $\vec{E}$ fields in a 3d space within the Quasi-static magnetic field generator, in which for this, we can start out for making the FDTD Equations by defining the following equations,
+\begin{equation}
+\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\frac{\mu_{zz}}{c_{o}} \frac{\partial{\tilde{H}_z}}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\frac{\mu_{yy}}{c_{o}} \frac{\partial{\tilde{H}_y}}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\frac{\mu_{xx}}{c_{o}} \frac{\partial{\tilde{H}_z}}{\partial{t}}
+\end{equation}
+in which we have each equation that we used for setting up the proper hat components in equations 24-26, we have them set here to be equal to each tensor component, in this case $\mu$ with the necessary subscript and tensor value assigned to that as well, divided by $C_0$, which is the speed of an electromagnetic wave within a vacuum. With equations 27 - 29, we can then make them into the following FDTD equations, with equation 27 being used first when defining the FDTD Equations,
+\begin{equation}
+\frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{E_{x}^{i, j+1, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{y}} = -\frac{\mu_{zz}^{i,j,k}}{c_0} \frac{\tilde{H}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation} 
+\begin{equation}
+\frac{E_{x}^{i+1, j, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{x}} = -\frac{\mu_{yy}^{i,j,k}}{c_0} \frac{\tilde{H}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+\begin{equation}
+\frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{z}} = -\frac{\mu_{xx}^{i,j,k}}{c_0} \frac{\tilde{H}_{x}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+Now that we have these FDTD Equations for the $\vec{E}$ fields, with the first equation here, 30, being the equation 27 in the form of an FDTD equation, with 28 being equation 31 in FDTD equation form, and 32 being 29 in FDTD Equation formed. Now that we have those defined for the $\vec{E}$ fields within the Quasi-static Magnetic Field Generator, we can then go do the same for the $\vec{E}$ fields, by using the following equations for modeling the $\vec{E}$ fields in 3d space, with those equations being,
+\begin{equation}
+\frac{\partial{\tilde{H}}_y}{\partial{x}} - \frac{\partial{\tilde{{H}}}_x}{\partial{y}} = \frac{\epsilon_{zz}}{c_{o}} \frac{\partial{E}_z}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{\tilde{H}}_x}{\partial{z}} - \frac{\partial{\tilde{{H}}}_z}{\partial{x}} = \frac{\epsilon_{yy}}{c_{o}} \frac{\partial{E}_y}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{\tilde{H}}_z}{\partial{y}} - \frac{\partial{\tilde{{H}}}_y}{\partial{z}} = \frac{\epsilon_{xx}}{c_{o}} \frac{\partial{E}_x}{\partial{t}}
+\end{equation}
+the equations above now defined, which are similar to equations 27-29, but this time are going to be used to define the modeled FDTD Equations for the $\vec{E}$ fields when visualized, with those FDTD Equations being,
+\begin{equation}
+\frac{\tilde{H}_{y}^{i, j + 1 , k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{\tilde{H}_{x}^{i + 1, j, k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{y}} = \frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+\begin{equation}
+\frac{\tilde{H}_{x}^{i+1, j , k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{\tilde{H}_{z}^{i, j, k + 1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{x}} = \frac{\epsilon_{yy}^{i,j,k}}{c_0} \frac{{E}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+\begin{equation}
+\frac{\tilde{H}_{z}^{i,j,k+1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{\tilde{H}_{y}^{i, j + 1, k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{z}} = \frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+with those equations now defined, we now have the FDTD Equations for the $\vec{E}$ fields, and when visualized, will show the direction of the vectors of the Quasi-static magnetic field, with the equations above, 36-38, being the same as the ones done with 33-35, Except now written in FDTD form, with those equations becoming 36-38 for the $\vec{H}$ fields using FDTD. Now that we have both FDTD Equations defined for both the $\vec{E}$ fields, and the FDTD Equations defined for the $\vec{H}$ Fields, we can then move onto deriving the newly formed equations. For this, we shall first start with deriving the equations for the $\vec{H}$ fields, with deriving the first FDTD Equation, being for the $\vec{H}_x$ component of the FDTD equations we found for the $\vec{H}$ fields, which is the equation for the x component of the H Fields is the following equation, 
+\begin{equation}
+\frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{z}} = -\frac{\mu_{xx}^{i,j,k}}{c_0} \frac{\tilde{H}_{x}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+when we first start out with deriving this equation, that being equation 39, we can first start out by switching the places of the current values on either side of the equation, and get the new equation of,
+\\
+\begin{equation}
+-\frac{\mu_{xx}^{i,j,k}}{c_0} \frac{\tilde{H}_{x}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{z}}
+\end{equation}
+with this now done, mainly being an organizational way of having the equation during the process of deriving the equation, we can first start out deriving the equation by taking the bottom fractional values for the first half of the equation, those being $c_0$ and $\Delta{t}$, and then take those out of the equation in equation 40, and then bring those over to the numerator of the fractional value for the tensor in equation 40, and bring it over to the second half of the equation, which gives us the new equation of,
+\begin{equation}
+\tilde{H}_{x}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} = -\frac{c_0\Delta{t}}{\mu_{xx}^{i,j,k}} \left(\frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{z}}\right)
+\end{equation}
+we then derive out the negative component on the left half of the equation, which in this case is $-\tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}$, and move that over to the other side of the equation once derived, which gives us the final result and final equation of for the $H_x$ component of the $\vec{H}$ fields, which is,
+\begin{equation}
+\tilde{H}_{x}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = \tilde{H}_{x}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} + \frac{c_0\Delta{t}}{\mu_{xx}^{i,j,k}} \left(\frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{z}}\right)
+\end{equation}
+with this equation, we now have a fully derived component for the $H$ field, that being one of them, which in this case is $H_x$ component of the $H$ field, fully derived from it's original FDTD Equation. We can also do this for the $H$ field, that being the remaining 2 which are the $H_y$ and $H_z$ components of the $H$ field, and there respective FDTD Equations, but, we shall first start with the $H_y$ component and deriving it, which will be done down below with the FDTD Equation for the $H_y$ component of the $H$ field, but we will first start with the FDTD Equation for the $H_y$ component of the $H$ field,
+\begin{equation}
+\frac{E_{x}^{i+1, j, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{x}} = -\frac{\mu_{yy}^{i,j,k}}{c_0} \frac{\tilde{H}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+with this equation now established for the $H_y$ component of the $H$ field and it's respective FDTD Equation, we can then move onto swapping the two halves of the equation, which will be done now down below for Equation 43.
+\begin{equation}
+-\frac{\mu_{yy}^{i,j,k}}{c_0} \frac{\tilde{H}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{E_{x}^{i+1, j, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{E_{z}^{i, j, k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{x}}
+\end{equation}
+and doing what we did with the $H_x$ component of the $H$ field during the process of deriving it's FDTD equation, we will now combine the fractional values on the bottom on the left half of the equation, and swap them with the numerator of the fraction where the value $c_0$ is located, and get the new equation of,
+\begin{equation}
+\tilde{H}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{y}^{i,j,k}\Big|_{t-\frac{\Delta{L}}{2}} = -\frac{c_0\Delta{t}}{\mu_{yy}^{i,j,k}} \left(\frac{E_{x}^{i+1,j,k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{E_{z}^{i,j,k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{x}}\right)
+\end{equation}
+and once the negative value of equation 45 is derived out, which in this case is $\tilde{H}_{y}^{i,j,k}\Big|_{t-\frac{\Delta{L}}{2}}$, we get the new equation of,
+\begin{equation}
+\tilde{H}_y^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = \tilde{H}_{y}^{i,j,k}\Big|_{t-\frac{\Delta{L}}{2}} + \frac{c_0\Delta{t}}{\mu_{yy}^{i,j,k}} \left(\frac{E_{x}^{i+1,j,k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{E_{z}^{i,j,k+1} \Big|_t - E_{z}^{i,j,k}\Big|_t}{\Delta{x}}\right)
+\end{equation}
+with this new equation, that being equation 46, we now have the fully derived FDTD Equation for the $H_y$ component of the $H$ fields, and we can then move onto deriving the FDTD equation for the $H_z$ component of the $H$ field, which is the equation,
+\begin{equation}
+\frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{E_{x}^{i, j+1, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{y}} = -\frac{\mu_{zz}^{i,j,k}}{c_0} \frac{\tilde{H}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+and once we have swapped both sides of the equation above, that being equation 47, we get the new equation of,
+\begin{equation}
+-\frac{\mu_{zz}^{i,j,k}}{c_0} \frac{\tilde{H}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{E_{x}^{i, j+1, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{y}}
+\end{equation}
+and doing so like we have with the last 2 derived FDTD equations, 42 and 45, we can derive out the denominator components on the left side of the equation and bring them over to the right side of the equation for the $H_z$ component, and gives us the new equation of,
+\begin{equation}
+\tilde{H}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} - \tilde{H}_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} = -\frac{c_0\Delta{t}}{\mu_{zz}^{i,j,k}} \left(\frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{E_{x}^{i, j+1, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{y}}\right)
+\end{equation}
+and once we derive out the negative component on the left of the FDTD Equation for the z component of the H field, we get the new equation of,
+\begin{equation}
+\tilde{H}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = \tilde{H}_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} + \frac{c_0\Delta{t}}{\mu_{zz}^{i,j,k}} \left(\frac{E_{y}^{i+1, j, k} \Big|_t - E_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{E_{x}^{i, j+1, k} \Big|_t - E_{x}^{i,j,k}\Big|_t}{\Delta{y}}\right)
+\end{equation}
+with all of the equations for FDTD from the $H$ fields now derived, we can now move onto deriving the $E$ field components, starting out with the $E_x$ component of the $E$ fields and deriving it's respective FDTD Equation, which is the following equation
+\begin{equation}
+\frac{\tilde{H}_{z}^{i,j,k+1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{\tilde{H}_{y}^{i, j + 1, k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{z}} = \frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation} 
+we can first start out with the derivation of this FDTD equation by swapping the components on both sides of the equation to get the new equation of,
+\begin{equation}
+\frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{\tilde{H}_{z}^{i,j,k+1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{\tilde{H}_{y}^{i, j + 1, k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{z}}
+\end{equation}
+once this is done, we can first do like we have with the other derived FDTD Equations for the $H$ components is derive out the denominator fractional values, and move them to the other side once derived, along with the numerator for the fractional value $c_0$, which gives us the new equation of,
+\begin{equation}
+{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} = \frac{c_0\Delta{t}}{\epsilon_{zz}^{i,j,k}} \left( \frac{\tilde{H}_{z}^{i,j,k+1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{\tilde{H}_{y}^{i, j + 1, k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{z}}\right)
+\end{equation}
+and once we derive out the negative component on the left half of equation 53, we get the new equation of,
+\begin{equation}
+{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} + \frac{c_0\Delta{t}}{\epsilon_{zz}^{i,j,k}} \left( \frac{\tilde{H}_{z}^{i,j,k+1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{y}} - \frac{\tilde{H}_{y}^{i, j + 1, k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{z}}\right)
+\end{equation}
+now that this is done for the $E_x$ component of the E Field, along with the fact that a general idea has been established of how the derivation process works for deriving the FDTD Equations for the E field, I shall now derive both components for the E field, being $E_y$ and $E_z$, which the first shall be the $E_y$ component of the E field, which has the FDTD equation of, 
+\begin{equation}
+\frac{\tilde{H}_{x}^{i+1, j , k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{\tilde{H}_{z}^{i, j, k + 1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{x}} = \frac{\epsilon_{yy}^{i,j,k}}{c_0} \frac{{E}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+we will now swap both sides of the equation and get the equation of
+\begin{equation}
+\frac{\epsilon_{yy}^{i,j,k}}{c_0} \frac{{E}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{\tilde{H}_{x}^{i+1, j , k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{\tilde{H}_{z}^{i, j, k + 1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{x}} 
+\end{equation}
+and when we derive out the denominator fractional values, and move the derived values to the other side of the equation, along with the tensor value numerator for $c_0$ in equation 54, we get the new equation of,
+\begin{equation}
+{E}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} = \frac{c_0\Delta{t}}{\epsilon_{yy}^{i,j,k}} \left(\frac{\tilde{H}_{x}^{i+1, j , k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{\tilde{H}_{z}^{i, j, k + 1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{x}}\right)
+\end{equation}
+and once the negative value on the left side of the equation for equation 57, we get the new and final equation of,
+\begin{equation}
+{E}_{y}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = E_{y}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} +  \frac{c_0\Delta{t}}{\epsilon_{yy}^{i,j,k}} \left(\frac{\tilde{H}_{x}^{i+1, j , k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{z}} - \frac{\tilde{H}_{z}^{i, j, k + 1} \Big|_t - \tilde{H}_{z}^{i,j,k}\Big|_t}{\Delta{x}}\right)
+\end{equation}
+with the equation above being the final derived equation for the $E_y$ component of the $E$ field, we can now move onto deriving the $E_z$ FDTD equation for the $E$ field, and below is the FDTD Equation for $E_z$, which is the equation,
+\begin{equation}
+\frac{\tilde{H}_{y}^{i, j + 1 , k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{\tilde{H}_{x}^{i + 1, j, k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{y}} = \frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}}
+\end{equation}
+which when the sides of the FDTD Equation for the $E_z$ component of the $E$ field, we can get the new equation of,
+\begin{equation}
+\frac{\epsilon_{zz}^{i,j,k}}{c_0} \frac{{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}}}{\Delta{t}} = \frac{\tilde{H}_{y}^{i, j + 1 , k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{\tilde{H}_{x}^{i + 1, j, k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{y}}
+\end{equation}
+and when we derive out the denominator fractional values on the left side of the equation, and move those over, along with the numerator value for $c_0$ to the other side of the equation, we get the new equation of,
+\begin{equation}
+{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} -E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} = \frac{c_0\Delta{t}}{\epsilon_{zz}^{i,j,k}} \left(\frac{\tilde{H}_{y}^{i, j + 1 , k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{\tilde{H}_{x}^{i + 1, j, k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{y}}\right)
+\end{equation}
+and now with that done, we can derive the negative component on the left half of the equation for equation 61 and bring it to the right side of the equation, we get the equation for the fully derived FDTD Equation for the $E_z$ component of the $E$ field over to the other side of the equation, we get the new equation of,
+\begin{equation}
+{E}_{z}^{i,j,k}\Big|_{t+\frac{\Delta{L}}{2}} = E_{z}^{i,j,k}\Big|_{t - \frac{\Delta{L}}{2}} + \frac{c_0\Delta{t}}{\epsilon_{zz}^{i,j,k}} \left(\frac{\tilde{H}_{y}^{i, j + 1 , k} \Big|_t - \tilde{H}_{y}^{i,j,k}\Big|_t}{\Delta{x}} - \frac{\tilde{H}_{x}^{i + 1, j, k} \Big|_t - \tilde{H}_{x}^{i,j,k}\Big|_t}{\Delta{y}}\right)
+\end{equation}
+and with the above equation, that being equation 62, we now have all the fully derived FDTD Equations for both the $E$ fields, and $H$ fields as well, which are also known as FDTD Update Equations when fully derived, which we have done with both the $E$ fields and $H$ fields as well. Now I can move onto showing the process of finding the vector direction of the current within the Quasi-static magnetic field generator, with first defining the following equations, each being set to certain component values in this case, which will all be set as subscripts to $B$, the magnetic field, aka the Quasi-static magnetic field generator current direction in this case. Here, we can employ Biots Savarts law once again, which is,
+\begin{equation}
+B = \frac{\mu_0I}{4\pi}
+\end{equation}
+and adding in $r^2$ to Biots Savarts law to account for the Radius of our generator, the equation for Biots Savarts law then becomes,
+\begin{equation}
+B = \frac{\mu_0Ir^2}{4\pi}
+\end{equation}
+in which $r^2$, in this case is the cylinder of our generator for the Quasi-static Magnetic field, we can then write the following equations for each component, in this case being $B_x,B_y,B_z$, and get the following equations,
+\\
+\begin{equation}
+B_x = \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{cos\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta
+\end{equation}
+\begin{equation}
+B_y = \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{sin\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta
+\end{equation}
+\begin{equation}
+B_z = \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{r-ysin\theta-xcos\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta
+\end{equation}
+now that we have these components, we can then combine the components into the following equation, accounting for all of the components, being $B_x, B_y, B_z$ in the following equation,
+\\
+\[B(x,y,z) = \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{cos\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta\]
+\[+ \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{sin\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta +\]
+\[\frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{r-ysin\theta-xcos\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta\]
+\\
+with the above equation now complete, we now know what the vector direction of the current within the Quasi-static Magnetic field Generator, which is defined by the equation above in this case.
 \subsection{Design of Meta-material Unit Cell}
 When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$.
 
 \subsection{COSMOL Simulations}
-For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and 
-
-\section{Data Collection}
-Collection of data was done mainly with the harvesting of data from COSMOL, and taking the data that obtained from the COSMOL Simulations. These data-sets were about 5 sets of data in total, but totaling for the lowest data-set with about 300 points of data within that smallest data-set, and nearly 14000 in other data-sets as well.
+For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COSMOL.
 
 \section{Results}
-Results from my data were mainly collected through COSMOL once the simulations were complete, and were broken up into .txt files, which then were imported into Google sheets for formatting the file properly, and then downloading the .csv file from Google sheets and inputting that into a Python Program I made that would be able to tell me the T-Test results needed, along with other statistical tests as well. The First set of data collected was for the Normal of the electric field that would be generated from the Quasi-static magnetic field, with those results being divided into three columns, those being 
-
+Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the Successful simulate that the electric field normal did.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{SParameterGraph1D.png}
+	\caption{The Graph for the S Parameter of the Simulations for the Meta-material unit cell.}
+	\label{fig:mesh1}
+	\includegraphics[width=\textwidth]{SmithPlotforReflection.png}
+	\caption{Smith Plot of Reflection, show the S-Parameter and the reflection of the Meta-material unit cell.}
+	\label{fig:mesh2}
+\end{figure}
+\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm, height=10cm]{ElectricFieldNormalGraphImage2.png}
+	\caption{Electric field normal on the Meta-material unit cell}
+	\label{fig:mesh3}
+\end{figure}
+\\
+\begin{figure}[h!] 
+	\centering
+	\includegraphics[width=10cm, height=10 cm]{ElectricFieldNormalGraphImage.png}
+	\caption{Electric field normal with the Meta-material Unit Cell visible from a top view.}
+	\label{fig:mesh4}
+\end{figure}
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{QuasistaticMagneticFieldVectorDirectionGraphImages.png}
+	\caption{Above is a diagram showing the Quasi-static magnetic field, inside the Quasi-static Magnetic Field Generator.}
+	\label{fig:mesh5}
+\end{figure}
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10.5 cm, height=10.5 cm]{OneDElectricFieldNormalGraphImage.png}
+	\caption{Electric Field Normal 1D Graph}
+	\label{fig:mesh6}
+\end{figure}
+\\
+\\
+\\
 \section{Discussion}
-Some of the major findings I had in this project while doing it were not significant mostly, but, some findings did stand out to me.
-
+With some of the findings of the Data I had within my project, none stood out that much, but one that stood out in particular were the results I found with my S-Parameter, that being with figure 1 in the results section of this paper. The Reason that I say this is because with the S-Parameter, this being the Scattering Parameter, from the simulations in COSMOL, for $S11$ and $S21$ all appear to be the same, which I was expecting to be much different, with much more of a voltage loss for $S21$, which there wasn't which surprised me mainly due to that. This also can be said with the S-Parameters being involved once again, with this being the Smith Plot this time. The Main reason that I say this is that like the S-Parameter Graph, the Same can be said for the Smith Plot, with the two parameters being almost the same in data-points, but rather, with the values for the $S11$ Parameter and $S21$ Parameter. With these results that stand out the most, the possible reason that the $S11$ and $S21$ graphs and smith plot may have looked like this may have been a possible error by me when inputting the simulation parameters into COSMOL, in which a parameter I may have put in for the solver to use caused this to happen as a result, which is possible, but not likely, due to the many times I had to go back and fix the simulation to allow for the simulation to run in the first place, ruling this out as a likely scenario. With models that I have read and seen online, most have had a wide difference in how the two scattering parameters were graphed, that being not close as they were within my case, which saw the two values be nearly identical in where they were on the graph. This probably may have changed if I did more than one simulation on the Unit cell that I designed, that being with different material parameters. In relation to the graph of the Quasi-static Magnetic field Vector Direction Graph, the results of that turned out a mess, mainly due to the error of me inputting the parameters wrong into COSMOL for the simulation, or missing something when adding global parameter and missed the wrong variable in this case, causing for the results of that graph, which in this case is figure number 5 within the results section. Overall, the results that looked the most reasonable in this case would be the Multi-slice graphs that showed the electric field normal and how that interacted with the meta-material unit cell itself, which seemed to have the most reasonable outcome in terms of data.
 \section{Conclusion}
-Conclusively, for my project, the results I obtained, the mathematical modeling done, and the COSMOL simulations that were done for this project, brought me to my final conclusion. This
-
+Conclusively, for my project, the results I obtained, the mathematical modeling done, and the COSMOL simulations that were done for this project.Simulations were done in COSMOL Multi-physics 5.2a, to obtain results such as the modeled Quasi-static magnetic field vector direction, and other graphs as well, such as the S-Parameter as well, with the rate of reflection and what was reflected off the meta-material unit cell designed for the receiver, and whether that would be an efficient method of allowing truly mobile wireless charging on a large scale, rather than what it is today, which can be found to be an extremely inconvenient method of wireless charging your device. The data that I received from these simulations however to show that this may not be the case yet, possibly due to the design of the Meta-material unit cell, with how it was designed, which showed this process of making wireless charging to be more efficient with the use of Meta-materials and Quasi-static magnetic fields in this, due to the data that I received from my COSMOL simulations, disproving my hypothesis for my project in the end.
 \section{Acknowledgments}
-Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COSMOL, and along with this me doing Mathematical modeling of it as well.  
-
+Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COSMOL, and along with this me doing Mathematical modeling of it as well. 
 \section{Appendix}
-This is filler text and will be used later on.
-
-\begin{thebibliography}{9}
+Here, while there is nothing here now, there will be in the future, along with this message being deleted, but mainly there are a few quick things I want to specify here with this rough draft when you read this, and that is the following. Mainly with a few of the diagrams that I tried to use within my project in the middle of certain sections and are off center. This can be said for the diagram of discrete capacitors, in which it is off slightly to the left half of the page, and also missing the $\vec{r}$ coming out from the middle discrete capacitor, to symbolize radius, like it did in my Notebook, which I plan to fix with the rough draft. Along with this, for the subsections after math modeling, being COSMOL simulations and metamaterial unit cell design, I plan to expand up later on, mainly due to the fact that for the metamaterial unit cell design, I accidentally deleted the original design, and will have to redesign it within Autodesk inventor, which is also why the COSMOL section isn't complete due to this, and the involvement of it within COSMOL, which is why that will be more complete overall in the rough draft. This won't be a problem for re-sketching it, as the electric field normal graph that is from a top view is the right design of it, and I have it sketched in my Notebook, making this not a problem. The Citations and references I will fix as well, as the spacing is something I don't know how to fix, but will have fixed by the final draft due date. With the results section the same can be said about that as well, with every-time I try and add text to that section to describe the graphs ever so slightly, an error appears, or the image randomly goes down to the bottom of the page for a certain graph, which I will have fixed by the final draft, along with stuff, such as raw data added here as well, and python code I used for my stat. tests as well.
+\begin{thebibliography} {9}
 	\bibitem{Computerworldarticle}
 Wireless charging explained: What is it and how does it work?
 \texttt{https://www.computerworld.com/article/3235176/mobile-wireless/
