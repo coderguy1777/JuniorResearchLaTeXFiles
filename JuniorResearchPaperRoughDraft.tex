@@ -2,52 +2,68 @@
 \usepackage{tikz}
 \usepackage{geometry}[margins = 0.5 in]
 \usepackage{graphicx}
+\usepackage[hyphens,spaces,obeyspaces]{url}
 \usetikzlibrary{arrows}
 \usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage{caption}
 \usetikzlibrary{arrows.meta}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
 \graphicspath{ {c:/user/lolzk/S Parameter Graph 1D} }
 \graphicspath{ {c:/user/lolzk/Smith Plot for Reflection} }
 \graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image2} }
 \graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image} }
 \graphicspath{ {c:/user/lolzk/Quasistatic Magnetic Field Vector Direction Graph Images} }
 \graphicspath{ {c:/user/lolzk/OneD Electric Field Normal Graph Image} }
+\graphicspath{ {c:/user/lolzk/Unit Cell } }
 \title{Using Quasi-static Magnetic Fields and Meta-material Amplifiers to allow for Ubiquitous Wireless Charging}
 \author{Jordan Hill \\ David Stover}
-
 \begin{document}
-	
 \maketitle
-
 \pagebreak
 
 \begin{abstract}
-Quasi-static Magnetic fields are Electromagnetic fields that are created from Quasi-static cavity resonance. Meta-materials are materials that have the ability to allow for high amounts of electric resonance, have the possibility to allow for highly efficient wireless charging, and solve the problem of current wireless charging. This causes the user to be restricted there device always while the device is charging, and not allowing the user the use of mobility while using wireless charging with modern methods. Hypothetically, to make the process of wireless charging hundreds of time more efficient through use of Quasi-static magnetic fields and reflective meta-materials as a use to solve this problem. Simulations for this was done using COSMOL 5.2a, and within that software is where the main work was done for calculating absorption of the Quasi-static magnetic field, along with the permittvity of the meta-material, $\epsilon_s$, and the permeability of the meta-material as well, defined as $\mu_0$. The Implemented experiment results that I obtained from COSMOL, in some cases fit the results I expected from the simulations and in some aspects did not fit the results I expected. The Importance of this project is mainly of how the application of such a method could be extremely useful in making the experience in wireless charging more free and open to the user, and not have the user forced to always keep the device on a pad when charging there device wireless, with current methods of wireless charging today being used.
+Quasi-static Magnetic fields are Electromagnetic fields that are created from Quasi-static cavity resonance. Meta-materials are materials that have the ability to allow for high amounts of electric resonance, have the possibility to allow for highly efficient wireless charging, and solve the problem of current wireless charging. This causes the user to be restricted there device always while the device is charging, and not allowing the user the use of mobility while using wireless charging with modern methods. Hypothetically, to make the process of wireless charging hundreds of time more efficient through use of Quasi-static magnetic fields and reflective meta-materials as a use to solve this problem. Simulations for this was done using COMSOL 5.2a, and within that software is where the main work was done for calculating absorption of the Quasi-static magnetic field, along with the permittivity of the meta-material, $\epsilon_s$, and the permeability of the meta-material as well, defined as $\mu_0$. The Implemented experiment results that I obtained from COMSOL, in some cases fit the results I expected from the simulations and in some aspects did not fit the results I expected. The Importance of this project is mainly of how the application of such a method could be extremely useful in making the experience in wireless charging more free and open to the user, and not have the user forced to always keep the device on a pad when charging there device wireless, with current methods of wireless charging today being used.
 \end{abstract}
 
 \pagebreak
 
 Wireless Charging, the Pinnacle of refueling devices, free of constraints, nothing holding the user back from being forced to charge with the length of cord limiting there freedom to move around while charging there device. But, a problem is present with Modern Wireless Charging in the current form that it is used in currently, and that is the need for a connection constantly to charge your device. The current method of wireless charging used today is known as Qi Charging. Qi Charging works with the wireless charging device having a built in copper coil. The Copper Coil is attached to the battery of the device, so current is put into the battery correctly while the device is charging. Power is transferred to the device through a Wireless Charging Pad, containing a Copper Coil inside the Pad. Transfer of Power is done between these two coils, using the coil inside the device as an inducting coil, and an alternating electromagnetic field is created. This field is the process responsible for allowing the wireless charging to occur in Qi Charging, and charge the device (Mearin, 2018). But, there is a problem with this process, and that is the lack of mobility, as when you place the device on the pad, you cannot under any circumstances remove it, as if you remove it from the pad, you lose the electromagnetic field that was made between the two coils, one in the pad and the device itself, which stops the charging process itself, which shows the Problem of Mobility with this method of wireless charging comes into play. Now, the answer to this problem is quite simple, and that is with the use of a Material, a special material, and the types of that being referred to as Meta-materials. Meta-materials are special materials, designed to have properties not found in any other modern material that would be found in Nature, and have a variety of properties when produced. Some of these materials have been known to have the ability to reflect electromagnetic waves, and reflect them completely, having no interaction with the Material itself what so ever (Institute of Physics, n.d.). This application of such Meta-materials has great application to solve the problem of mobility with wireless charging. Meta-materials can contain these properties, mainly due to the construction of there unit cells, which make up the fundamental structure of the material itself, and its properties, such as impedance, admittance, and reflective properties of the material. Impedance is the effect of electrical resistance on an electrical component when compared to the alternating current (Wikepedia, 2018), if one is present. The Reflective properties of the material mainly if the material doesn't absorb any of the Electromagnetic waves from the Quasi-static Magnetic field, but reflects them instead rather than absorbing the Electromagnetic waves from the Quasi-static magnetic field. A Meta-material itself, when they are made have something called a unit cell. A unit cell is what the meta-material makes up the design of the cells of the sheet of a meta material, with each space containing the unit cell itself, which is then typically inserted onto a slab of a material, with the unit cells of the Meta-material are placed on. Then, there is a concept known as Quasi-static Cavity Resonance. Quasi-static Cavity Resonance is a method that can be used to create near standing waves for a magnetic field inside a resonant structure, and resonant coupling to smaller receivers that can pick up the charge and are near the structure itself (Chabalko, M. J., Shahmohammadi, M., Sample, 2017).
 \linebreak
-My project mainly focuses on one thing, and that is making the process of wireless charging more efficient, and more applicable to be used as a main charging method for charging devices rather than a cord method. I did this by attempted to find a way using the concept of Quasi-static cavity resonance, and Quasi-static magnetic fields, to generate a magnetic field that can then be deflected by a set of meta-material reflectors. These Meta-material reflectors would then reflect any waves from the Quasi-static magnetic field, which would then be picked up by the receiver in a device in this case. Once the reflected wave off the meta-material reflector would be picked up by the receiver in the device, the device would charge due to this. The results I would be obtaining from the COSMOL Simulations would allow me to see the total absorption of the waves from the Quasi-static magnetic field that the meta-material had, and also the reflectance that the meta-material unit cell had, which in this case would be graphed in the form of a smith plot, which will be how that is graphed. In summary, my main goal with this project is to find a possibly more efficient method of wireless charging by using Quasi-static magnetic fields and meta-materials, to allow for wireless charging that truly allows for wireless charging on the mobile level that it was always meant to be at. The Main Hypothesis I have about my results are that they will show the method of using meta-materials as a method to allow for wireless charging at a level where you don't have to worry about it always being connected to a pad, and with the use of Quasi-static magnetic fields will be a very efficient process to allow wireless charging at truly mobile distances like it should be.
+My project mainly focuses on one thing, and that is making the process of wireless charging more efficient, and more applicable to be used as a main charging method for charging devices rather than a cord method. I did this by attempted to find a way using the concept of Quasi-static cavity resonance, and Quasi-static magnetic fields, to generate a magnetic field that can then be deflected by a set of meta-material reflectors. These Meta-material reflectors would then reflect any waves from the Quasi-static magnetic field, which would then be picked up by the receiver in a device in this case. Once the reflected wave off the meta-material reflector would be picked up by the receiver in the device, the device would charge due to this. The results I would be obtaining from the COMSOL Simulations would allow me to see the total absorption of the waves from the Quasi-static magnetic field that the meta-material had, and also the reflectance that the meta-material unit cell had, which in this case would be graphed in the form of a smith plot, which will be how that is graphed. In summary, my main goal with this project is to find a possibly more efficient method of wireless charging by using Quasi-static magnetic fields and meta-materials, to allow for wireless charging that truly allows for wireless charging on the mobile level that it was always meant to be at. The Main Hypothesis I have about my results are that they will show the method of using meta-materials as a method to allow for wireless charging at a level where you don't have to worry about it always being connected to a pad, and with the use of Quasi-static magnetic fields will be a very efficient process to allow wireless charging at truly mobile distances like it should be.
 
-\section{Methods and Materials} 
-Materials used in this project were quite minimal, due to the centralized nature of it heavily around simulations of the project, before any theoretical modeling was actually done. The start of the project involved me doing mathematical modeling for the theoretical part of this project, which saw me define the main elements of the project, such as the strength of the Quasi-static magnetic field, meta-material related parameters, and other components as well. All of the experimental work was done within the FEM Analysis software, COSMOL 5.2a, with the results from the simulation runs for certain components of the project being exported out for data collection. For finding the T-Test values, or any other statistical values of that matter, the use of python was employed with the help of the python module, \textit{PANDAS}, which is a python module that is used for the purpose of data science and statistics mainly.
+\section*{Methods and Materials} 
+Materials used in this project were quite minimal, due to the centralized nature of it heavily around simulations of the project, before any theoretical modeling was actually done. The start of the project involved me doing mathematical modeling for the theoretical part of this project, which saw me define the main elements of the project, such as the strength of the Quasi-static magnetic field, meta-material related parameters, and other components as well. All of the experimental work was done within the FEM Analysis software, COMSOL 5.2a, with the results from the simulation runs for certain components of the project being exported out for data collection. For finding the T-Test values, or any other statistical values of that matter, the use of python was employed with the help of the python module, \textit{PANDAS}, which is a python module that is used for the purpose of data science and statistics mainly.
 
-\subsection{Mathematical Modeling}
+\subsection*{Mathematical Modeling}
 Mathematical Modeling used within this project worked with many equations, but one of the main ones being for the modeling of the Quasi-static field coming from the main Quasi-static magnetic field generator itself. To define this Generator of the Quasi-static magnetic field, a Cylinder was designed for the theoretical model, which is for the cylinder, the length being symbolized by it being approximately equal to $\Delta$l, as shown here: $\Delta$l $\approx$ 2.4384 m. Visualizing this, a point of displacement for the field was defined to calculate the possible strength, with that point being defined as:
-\[ \rho =  \left(\begin{array}{c}
+\begin{equation}
+\rho =  \left(\begin{array}{c}
 x \\
 y \\
 z 
-\end{array}\right)\]
+\end{array}\right)
+\end{equation}
 with $\rho$ being the point of displacement being used for calculating the strength of the Quasi-static magnetic field at this point of displacement for calculating the strength of it. Along with this, when defined, a current direction is placed going up through the cylinder itself, being defined as $\vec{I}$, and this is repeated twice over the cylinder, the main generator that is, and an equation for this current and the current direction can be defined as:
-\[C = \vec{2I} + \vec{I}\]
+\begin{equation}
+C = \vec{2I} + \vec{I}
+\end{equation}
 where \textbf{\textit{C}} in this equations is the sum of the vector directions for the current direction of $\vec{I}$. In the equation with $\vec{2I}$, that is defined as both of the current directions summed together, with the $\vec{I}$ being the individual current direction of $\vec{I}$ in the equation. The Purpose of the Equation here is mainly to define the total amount of current, being defined in mA, that being milliamperes, for the given equation, with the adding of the two being used to calculate the current going either in a negative direction into a negative quadrant of the 3D Coordinate plane, or the opposite, with the current going in a positive direction into a positive quadrant. Then, for calculating the point of displacement, and the strength of the Quasi-static Magnetic, use of Biots Savarts law, which is written as:
-\[B = \frac{\mu_0I}{4\pi} \]
+\begin{equation}
+B = \frac{\mu_0I}{4\pi}
+\end{equation}
 and then for use for the approximation with using the point of displacement to calculate the strength of the Quasi-static Magnetic Field, that can be defined as the following equation, which is: 
-\[\rho = x^2+y^2+z^2 \]
+\begin{equation}
+\rho = x^2+y^2+z^2
+\end{equation}
 with that to be used in the approximation, for calculating the point of displacement, and with that, we can define an equation for the point of displacement, and in turn the Quasi-static Magnetic field at the point we selected in this case, with this equation being defined as,
-\[B = \frac{\mu_0I}{4\pi} \cdot \frac{ \left(\begin{array}{c} 
+\begin{equation}
+B = \frac{\mu_0I}{4\pi} \cdot \frac{ \left(\begin{array}{c} 
 0 \\
 -\Delta\l \\
 0 
@@ -83,12 +99,12 @@ z
 -\Delta{x} \\ 
 y + \frac{\Delta\l}{2} \\
 z^2
-\end{array}\right)}{((-\Delta{x})^2 + (y - \frac{\Delta\l}{2})^2 + z^2)^\frac{3}{2}} + \frac{\mu_0I}{4\pi}\]
+\end{array}\right)}{((-\Delta{x})^2 + (y - \frac{\Delta\l}{2})^2 + z^2)^\frac{3}{2}} + \frac{\mu_0I}{4\pi}
+\end{equation}
 Now, with the equation written above, it can be used to calculate the strength of the magnetic field at the displacement point selected, which is the point $\rho$, and using that point and the equation above, now that we have this equation for that point, and the calculations for the point and the distance to it, which were all calculated here in this case to be constant. Next we have the use of discrete capacitors, which are within the center of the cylinder, below is an example of this, all of the discrete capacitors in the center for the mathematical model is down below: 
-\linebreak
-\linebreak
+\begin{figure}
 \begin{tikzpicture}
-\draw (2,3) ellipse (0cm and 0cm);
+\draw (0.5,3) ellipse (0cm and 0cm);
 \draw(8,0) circle(3 cm);
 \draw(8,0.1) circle(0.35cm) node{$H$};
 \draw(5.5,0.15) circle(0.35 cm) node{$H_-$};
@@ -104,13 +120,15 @@ Now, with the equation written above, it can be used to calculate the strength o
 \draw(10.13, 1.2) circle(0.35 cm) node{$H_+$};
 \draw(10.4, 0.1) circle(0.35 cm) node{$H_-$};
 \end{tikzpicture}
-\linebreak
-\linebreak
+\end{figure}
 Here, with the diagram of the discrete capacitors, there is one thing that is not known, and that is the dielectrics of each discrete capacitor. For this, an equation can be used, with finding the dielectrics for each capacitor, and then the capacitance of each capacitor. For this, we can start with the following equation that uses Coulombs constant,
-
-\[V = \frac{\lambda}{4\pi\epsilon_o} \int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt\]
+\begin{equation}
+V = \frac{\lambda}{4\pi\epsilon_o} \int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt
+\end{equation}
 with $V$ being the dielectrics of the discrete capacitors, what it is defined as mainly. Then with the current going out, defined as \textit{out}, being integrated over the current going in, being defined as \textit{in}, and that current direction going through the discrete capacitors, being defined as $\vec{H}$, the current direction and current, is defined as $\vec{\mu}$, with $r^2$ being the $\vec{r}$ coming from the center discrete capacitor that is neither positive or negatively charged. Now with this equation, we can find with the equation being used from above 
-\[V =\frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt\]
+\begin{equation}
+V =\frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt
+\end{equation}
 and then find with making the $\vec{H}$ into an integral for the + and - charge of each of the capacitors in the diagram shown of the discrete capacitors in the generator, the equation then becomes,
 \[V = \int_{H_-}^{H_+} \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot dt\]
 with this new equation, use $dt$ as the derivative we integrate the integral $\int_{H_-}^{H_+}$ using this derivative, the equation then becomes,
@@ -124,9 +142,13 @@ due to the presence of the new natural logarithm, $ln$, replacing the integral f
 With the equation for the dielectrics of the capacitors now found, to find the total possible capacitance of each capacitor, the law of capacitance can be used to do this, with the equation for that law being,
 \[C = \frac{Q}{V} \]
 where $C$ is the total capacitance, which is divided by V, the dielectric of the capacitor in this case, using the capacitance law, we can substitute $Q$ for $\lambda$ in the equation  where $r^2$ is removed, which gives us the equation of,
-\[V = \frac{Q}{4\pi\epsilon_o\mu}\ln(\frac{out}{in})\vec{H}(+)(-)\]
+\begin{equation}
+V = \frac{Q}{4\pi\epsilon_o\mu}\ln(\frac{out}{in})\vec{H}(+)(-)
+\end{equation}
 where $\vec{\mu}$ is carried over and added to the Coulombs constant for the equation, which makes it $V = \frac{Q}{4\pi\epsilon_o\mu}$ due to that. Then, using the law of capacitance, which is $C = \frac{Q}{V}$, and substitute the results we have for $V$, we get the equation of,
-\[C = \frac{Q}{\frac{Q}{4\pi\epsilon_o\mu}}\ln(\frac{out}{in})\vec{H}(+)(-)\]
+\begin{equation}
+C = \frac{Q}{\frac{Q}{4\pi\epsilon_o\mu}}\ln(\frac{out}{in})\vec{H}(+)(-)
+\end{equation}
 with this equation, when we remove $Q$ from the equation and divide it out from the nested fraction of the equation, we get the final equation of,
 \[C = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}\vec{H}(+)(-)\]
 we then have the final equation for the total capacitance of each discrete capacitor within the diagram shown earlier in this section. With the total capacitance found for each of the discrete capacitors, we can then go onto finding the total possible energy stored in each discrete capacitor. For this, we can start out by defining the differential, $dQ$, which can be defined as $dQ$ = capacitance of a given capacitor for this function. With this differential, we can define this by placing one of the capacitor onto a 3d coordinate plane, as shown here within the diagram,
@@ -483,100 +505,177 @@ now that we have these components, we can then combine the components into the f
 \[+ \frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{sin\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta +\]
 \[\frac{\mu_0Ir^2}{4\pi} \cdot \int_{0}^{2\pi} \frac{r-ysin\theta-xcos\theta}{\Delta{L}[x^2+y^2+z^2+r^2-2r(xcos\theta+ysin\theta)^\frac{3}{2}}d\theta\]
 \\
-with the above equation now complete, we now know what the vector direction of the current within the Quasi-static Magnetic field Generator, which is defined by the equation above in this case.
-\subsection{Design of Meta-material Unit Cell}
-When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$.
-
-\subsection{COSMOL Simulations}
-For the simulations for this project within COSMOL, that being the version of COSMOL being 5.2A as the version of COSMOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COSMOL.
-
-\section{Results}
+with the above equation now complete, we now know what the vector direction of the current within the Quasi-static Magnetic field Generator, which is defined by the equation above in this case. Moving on, we can then start to define equations surrounding the Meta-material Unit Cell itself, which is one of the main parts of this project. The first set of these equations for the Meta-material Unit Cell being some of the parameter equations for the Meta-material and the Unit cell for there simulation in COMSOL. The First equation that can be established is the following equation, which is down below as the defined equation,
+\begin{equation}
+d\theta = \Delta{l} \frac{\partial{m}_x+\partial{m}_y + \partial{m}_z \cdot \epsilon_{rf}}{(sin\theta_i - sin\theta)\alpha}\left(\frac{d}{dt}\right) \sqrt{\mu_o/\epsilon_o}
+\end{equation}
+in which the angle of incidence is defined as the differential $d\theta$, with that being calculated to be the sum of the maxwell surface tensors for it, with those being $\partial{m}_x + \partial{m}_y + \partial{m}_z$, and then that being defined an initial angle of incidence, with that being $sin\theta_i$, and that being subtracted by $sin\theta$, which is defined as the final angle of incidence in this case. We then have that being set next to a time derivative, which in this case is $\frac{d}{dt}$, and that being multiplied by a square root of $\mu_o, \epsilon_o$, in which we have $\mu_o$ being the magnetic field, and $\epsilon$ being the electric field in this case. Now, once we Integrate this equation, using $\Delta{i}$, we can get the new equation of,
+\begin{equation}
+\theta = \Delta{i}\int \frac{\partial{m}_x+\partial{m}_y + \partial{m}_z \cdot \epsilon_{rf}}{(sin\theta_i - sin\theta)\alpha} \left(\frac{d}{dt}\right) \sqrt{\mu_o/\epsilon_o}
+\end{equation}
+in which we have the fraction of the equation in this case being integrated by the differential, in this case being $\Delta{i}$, and once we factor $\alpha$ out of the equation, we get the new equation of,
+\begin{equation}
+\theta = \Delta{i}\int \frac{\partial{m}_x+\partial{m}_y + \partial{m}_z \cdot \epsilon_{rf}}{(sin\theta_i - sin\theta)} \left(\frac{d}{dt}\right)\sqrt{\mu_o/\epsilon_o}
+\end{equation}
+and once we have this done for the equation with $\alpha$ factored out of the equation, we can then turn the derivative, this being $\frac{d}{dt}$ into $\Delta{t}$, which gives us the following new equation, which is listed down below. 
+\\
+\begin{equation}
+\theta = \Delta{i} \int \frac{\partial{m}_x+\partial{m}_y + \partial{m}_z \cdot \epsilon_{rf}}{(sin\theta_i - sin\theta)} \Delta{t} \sqrt{\mu_o/\epsilon_o}
+\end{equation}
+\\
+with this now done, we can then add a minimum of $0$ to the minimum and maximum range of the integral in the equation above, which gives us the new equation of 
+\\
+\begin{equation}
+\theta = \Delta{i} \int_{0}^{0}  \frac{\partial{m}_x+\partial{m}_y + \partial{m}_z \cdot \epsilon_{rf}}{(sin\theta_i - sin\theta)} 
+\end{equation}
+\\
+with this equation now derived out fully, we now have the parameter equation that was used for calculating the angle of incidence throughout all the COMSOL Simulations, and was used as a global equation within all simulations that were done in COMSOL. The Next equation that will be defined and was used within my project is an equation that was used to find the angle of reflection of the Metamaterial, with that equation being listed down below for the curl equation for the angle of reflection on the Metamaterial itself, with that equation being,
+\begin{equation}
+R = [I]e^{ik} e^{ij} xyz + \frac{\partial}{\partial{x}} +\frac{\partial}{\partial{y}} + \frac{\partial}{\partial{z}}
+\end{equation}
+where we have $I$ being defined defined as the reflection coefficient, and we then have $e^{ik}$, and $e^{ij}$, which are meant to define the angle of reflection within 3D space mainly. We then can find the equation of divergence for the angle of reflection with the curl equation now defined for the angle of reflection, with that equation being,
+\begin{equation}
+\nabla \cdot \vec{R} = -\frac{\partial{\Gamma}}{\partial{t}}
+\end{equation}
+in which we have the divergence equation now defined, we can then expand that divergence equation into the following equation which is down below.
+\begin{equation}
+\left(\frac{\partial{R}_z}{\partial{y}} - \frac{\partial{R}_y}{\partial{z}}\right)\hat{a}_x + \left(\frac{\partial{R}_x}{\partial{z}} - \frac{\partial{R}_z}{\partial{x}}\right)\hat{a}_y + \left(\frac{\partial{R}_x}{\partial{y}} - \frac{\partial{R}_y}{\partial{x}}\right)\hat{a}_z
+\end{equation}
+With the Divergence equation now Expanded, we can then move on and expanded the time partial derivative, which is $\partial{t}$ in this case, and get the final expanded divergence equation, which is down below.
+\begin{equation}
+\left(\frac{\partial{R}_z}{\partial{y}} - \frac{\partial{R}_y}{\partial{z}}\right)\hat{a}_x + \left(\frac{\partial{R}_x}{\partial{z}} - \frac{\partial{R}_z}{\partial{x}}\right)\hat{a}_y + \left(\frac{\partial{R}_x}{\partial{y}} - \frac{\partial{R}_y}{\partial{x}}\right)\hat{a}_z = -\frac{\partial}{\partial{t}}\left(R_x\hat{a}_x+R_y\hat{a}_y+R_z\hat{a}_z\right)
+\end{equation}
+With the divergence equation for the angle of reflection on the Metamaterial now expanded, we can then move on to defining the equation use for finding the Angle of Reflection for the initial part of the simulations, which is defined as the following equation below.
+\\
+\begin{equation}
+R_i = \frac{\sqrt{\mu_o^k + e^{ik}e^{ij}} + cos\theta \cdot (\Gamma\epsilon_i^2 + \epsilon_j^2 + \epsilon_k^2)}{cos\theta - \frac{1}{i} \left(\frac{\mu_o^k + \theta_i + \epsilon(x) + \epsilon(y) + \epsilon(z)}{\hat{x}^2 +\hat{y}^2+\hat{z}^2 \cdot \hat{k}\partial \cos\theta}\right)}
+\end{equation}
+\\
+in which we have in the above equation $R_i$, which is subscript of the incidence angle in this case, with R, being defined as the reflection coefficient within this equation. In this equation as well, we also have the square root of the electric field, with that being defined as $\mu_o^k$, with the angles of incidence, these being $e^{ik}$ and $e^{ij}$. With this equation now defined, we can then move onto defining the matrices for the Reflection Coefficient, both in Positive and Negative Form, with the reflection coefficient being defined as $\Gamma$ when used for the positive matrix, and $-(\Gamma)$. The matrix for the positive reflection coefficient, $\Gamma$ is defined down below,
+\begin{equation} 
+\Gamma = 
+\left(\begin{array}{ccc}
+R_{xx} & R_{xy} & R_{xz}\\
+R_{yx} & R_{yy} & R_{yz}\\
+R_{zx} & R_{zy} & R_{zz}
+\end{array}\right)
+\end{equation}
+With the positive matrix for the reflection coefficient now defined, we can then move onto to define the matrix for the negative form of the matrix for the negative reflection coefficient, which in this case is $-(\Gamma)$, and that matrix can be defined as follows down below,
+\begin{equation}
+-(\Gamma) = \left(\begin{array}{ccc}
+-R_{xx} & -R_{xy} & -R_{xz}\\
+-R_{yx} & -R_{yy} & -R_{yz}\\
+-R_{zx} & -R_{zy} & -R_{zz}
+\end{array}\right)
+\end{equation}
+with the negative form of the reflection coefficient matrix now defined, we can now move on from that and finish defining all the math modeling components of my project. We shall now move onto the second most crucial part of the project, which is the Design of the Metamaterial Unit Cell in this case, which shall be discussed within the next Section of this Research paper. 
+\subsection*{Design of Metamaterial Unit Cell}
+When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$. The Following diagram of the metamaterial unit cell is shown down below, along with all of the parameters that are defined with the unit cell as well for measurements as well that are used on the metamaterial unit cell as well.
+\begin{figure}[H]
+\begin{tikzpicture}
+ \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{UnitCell.png}};
+ \draw(7.65,8) node{$\ell$};
+ \draw(0.55,8) node{a};
+ \draw(14.65,8) node{a};
+ \draw(7.65,0.55) node{a};
+ \draw(7.65, 14.65) node{a};
+ \draw(9.35,8.75) node{$g_2$};
+ \draw(5.95,8.75) node{$g_2$};
+\end{tikzpicture}
+\end{figure}
+\noindent
+Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and 
+\subsection*{COMSOL Simulations}
+For the simulations for this project within COMSOL, that being the version of COMSOL being 5.2A as the version of COMSOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COMSOL.
+\section*{Results}
 Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the Successful simulate that the electric field normal did.
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{SParameterGraph1D.png}
-	\caption{The Graph for the S Parameter of the Simulations for the Meta-material unit cell.}
-	\label{fig:mesh1}
-	\includegraphics[width=\textwidth]{SmithPlotforReflection.png}
-	\caption{Smith Plot of Reflection, show the S-Parameter and the reflection of the Meta-material unit cell.}
-	\label{fig:mesh2}
+	\caption{SParameterGraph1D}
+	\label{test111}
 \end{figure}
-\\
-\begin{figure}[h!]
+\noindent
+this is filer text
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{SmithPlotforReflection.png}
+	\caption{SParameterGraph1D}
+	\label{test1112}
+\end{figure}
+\noindent
+This is filler text.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm, height=10cm]{ElectricFieldNormalGraphImage2.png}
-	\caption{Electric field normal on the Meta-material unit cell}
-	\label{fig:mesh3}
+	\caption{SParameterGraph1D}
+	\label{test11122}
 \end{figure}
-\\
-\begin{figure}[h!] 
+\noindent
+This is filler text.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm, height=10 cm]{ElectricFieldNormalGraphImage.png}
-	\caption{Electric field normal with the Meta-material Unit Cell visible from a top view.}
-	\label{fig:mesh4}
+	\caption{test2}
+	\label{test2121}
 \end{figure}
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\begin{figure}[h!]
+\noindent
+Within the graph above we have the results of one of the main COMSOL Simulations, with that being 
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{QuasistaticMagneticFieldVectorDirectionGraphImages.png}
-	\caption{Above is a diagram showing the Quasi-static magnetic field, inside the Quasi-static Magnetic Field Generator.}
-	\label{fig:mesh5}
+	\caption{The Figure above shows the vector direction of the Quasistatic Magnetic field within the Quasistatic magnetic field .}
+	\label{test982}
 \end{figure}
-\\
-\\
-\\
-\\
-\\
-\\
-\begin{figure}[h!]
+\noindent
+The Graph above that was just shown is the simulation of the 
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10.5 cm, height=10.5 cm]{OneDElectricFieldNormalGraphImage.png}
-	\caption{Electric Field Normal 1D Graph}
-	\label{fig:mesh6}
+	\caption{The Electric field Normal of the Metamaterial Unit Cell graphed in one dimensional form.}
+	\label{test8128382}
 \end{figure}
-\\
-\\
-\\
-\section{Discussion}
-With some of the findings of the Data I had within my project, none stood out that much, but one that stood out in particular were the results I found with my S-Parameter, that being with figure 1 in the results section of this paper. The Reason that I say this is because with the S-Parameter, this being the Scattering Parameter, from the simulations in COSMOL, for $S11$ and $S21$ all appear to be the same, which I was expecting to be much different, with much more of a voltage loss for $S21$, which there wasn't which surprised me mainly due to that. This also can be said with the S-Parameters being involved once again, with this being the Smith Plot this time. The Main reason that I say this is that like the S-Parameter Graph, the Same can be said for the Smith Plot, with the two parameters being almost the same in data-points, but rather, with the values for the $S11$ Parameter and $S21$ Parameter. With these results that stand out the most, the possible reason that the $S11$ and $S21$ graphs and smith plot may have looked like this may have been a possible error by me when inputting the simulation parameters into COSMOL, in which a parameter I may have put in for the solver to use caused this to happen as a result, which is possible, but not likely, due to the many times I had to go back and fix the simulation to allow for the simulation to run in the first place, ruling this out as a likely scenario. With models that I have read and seen online, most have had a wide difference in how the two scattering parameters were graphed, that being not close as they were within my case, which saw the two values be nearly identical in where they were on the graph. This probably may have changed if I did more than one simulation on the Unit cell that I designed, that being with different material parameters. In relation to the graph of the Quasi-static Magnetic field Vector Direction Graph, the results of that turned out a mess, mainly due to the error of me inputting the parameters wrong into COSMOL for the simulation, or missing something when adding global parameter and missed the wrong variable in this case, causing for the results of that graph, which in this case is figure number 5 within the results section. Overall, the results that looked the most reasonable in this case would be the Multi-slice graphs that showed the electric field normal and how that interacted with the meta-material unit cell itself, which seemed to have the most reasonable outcome in terms of data.
-\section{Conclusion}
-Conclusively, for my project, the results I obtained, the mathematical modeling done, and the COSMOL simulations that were done for this project.Simulations were done in COSMOL Multi-physics 5.2a, to obtain results such as the modeled Quasi-static magnetic field vector direction, and other graphs as well, such as the S-Parameter as well, with the rate of reflection and what was reflected off the meta-material unit cell designed for the receiver, and whether that would be an efficient method of allowing truly mobile wireless charging on a large scale, rather than what it is today, which can be found to be an extremely inconvenient method of wireless charging your device. The data that I received from these simulations however to show that this may not be the case yet, possibly due to the design of the Meta-material unit cell, with how it was designed, which showed this process of making wireless charging to be more efficient with the use of Meta-materials and Quasi-static magnetic fields in this, due to the data that I received from my COSMOL simulations, disproving my hypothesis for my project in the end.
-\section{Acknowledgments}
-Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COSMOL, and along with this me doing Mathematical modeling of it as well. 
-\section{Appendix}
-Here, while there is nothing here now, there will be in the future, along with this message being deleted, but mainly there are a few quick things I want to specify here with this rough draft when you read this, and that is the following. Mainly with a few of the diagrams that I tried to use within my project in the middle of certain sections and are off center. This can be said for the diagram of discrete capacitors, in which it is off slightly to the left half of the page, and also missing the $\vec{r}$ coming out from the middle discrete capacitor, to symbolize radius, like it did in my Notebook, which I plan to fix with the rough draft. Along with this, for the subsections after math modeling, being COSMOL simulations and metamaterial unit cell design, I plan to expand up later on, mainly due to the fact that for the metamaterial unit cell design, I accidentally deleted the original design, and will have to redesign it within Autodesk inventor, which is also why the COSMOL section isn't complete due to this, and the involvement of it within COSMOL, which is why that will be more complete overall in the rough draft. This won't be a problem for re-sketching it, as the electric field normal graph that is from a top view is the right design of it, and I have it sketched in my Notebook, making this not a problem. The Citations and references I will fix as well, as the spacing is something I don't know how to fix, but will have fixed by the final draft due date. With the results section the same can be said about that as well, with every-time I try and add text to that section to describe the graphs ever so slightly, an error appears, or the image randomly goes down to the bottom of the page for a certain graph, which I will have fixed by the final draft, along with stuff, such as raw data added here as well, and python code I used for my stat. tests as well.
-\begin{thebibliography} {9}
-	\bibitem{Computerworldarticle}
-Wireless charging explained: What is it and how does it work?
-\texttt{https://www.computerworld.com/article/3235176/mobile-wireless/
-	wireless-charging-explained-what-is-it-and-how-does-it-work.html}
-	\bibitem{Metamaterialsource}
-Metamaterials, "After another news story about a “Harry Potter invisibility cloak”, we take a look at the science behind metamaterials".
-\texttt{http://www.iop.org/resources/topic/archive/metamaterials/}
-	\bibitem{Impedance}
-Electrical impedance
-
-\texttt{https://en.wikipedia.org/wiki/Electrical/impedance}	
-	\bibitem{Quasistatic Cavity Resonance}
-Quasistatic Cavity Resonance for Ubiquitous Wireless Power Transfer
-\texttt{https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0169045}
+\noindent
+what the graph above shows is the electric field normal of the Quasistatic Magnetic Field on the 
+\section*{Discussion}
+With some of the findings of the Data I had within my project, none stood out that much, but one that stood out in particular were the results I found with my S-Parameter, that being with figure 1 in the results section of this paper. The Reason that I say this is because with the S-Parameter, this being the Scattering Parameter, from the simulations in COMSOL, for $S11$ and $S21$ all appear to be the same, which I was expecting to be much different, with much more of a voltage loss for $S21$, which there wasn't which surprised me mainly due to that. This also can be said with the S-Parameters being involved once again, with this being the Smith Plot this time. The Main reason that I say this is that like the S-Parameter Graph, the Same can be said for the Smith Plot, with the two parameters being almost the same in data-points, but rather, with the values for the $S11$ Parameter and $S21$ Parameter. With these results that stand out the most, the possible reason that the $S11$ and $S21$ graphs and smith plot may have looked like this may have been a possible error by me when inputting the simulation parameters into COMSOL, in which a parameter I may have put in for the solver to use caused this to happen as a result, which is possible, but not likely, due to the many times I had to go back and fix the simulation to allow for the simulation to run in the first place, ruling this out as a likely scenario. With models that I have read and seen online, most have had a wide difference in how the two scattering parameters were graphed, that being not close as they were within my case, which saw the two values be nearly identical in where they were on the graph. This probably may have changed if I did more than one simulation on the Unit cell that I designed, that being with different material parameters. In relation to the graph of the Quasi-static Magnetic field Vector Direction Graph, the results of that turned out a mess, mainly due to the error of me inputting the parameters wrong into COMSOL for the simulation, or missing something when adding global parameter and missed the wrong variable in this case, causing for the results of that graph, which in this case is figure number 5 within the results section. Overall, the results that looked the most reasonable in this case would be the Multi-slice graphs that showed the electric field normal and how that interacted with the meta-material unit cell itself, which seemed to have the most reasonable outcome in terms of data.
+\section*{Conclusion}
+In conclusion, for my project, the results I obtained, the mathematical modeling done, and the COMSOL simulations that were done for this project.Simulations were done in COMSOL Multi-physics 5.2a, to obtain results such as the modeled Quasi-static magnetic field vector direction, and other graphs as well, such as the S-Parameter as well, with the rate of reflection and what was reflected off the meta-material unit cell designed for the receiver, and whether that would be an efficient method of allowing truly mobile wireless charging on a large scale, rather than what it is today, which can be found to be an extremely inconvenient method of wireless charging your device. The data that I received from these simulations however to show that this may not be the case yet, possibly due to the design of the Meta-material unit cell, with how it was designed, which showed this process of making wireless charging to be more efficient with the use of Meta-materials and Quasi-static magnetic fields in this, due to the data that I received from my COMSOL simulations, disproving my hypothesis for my project in the end.
+\section*{Acknowledgments}
+Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COMSOL, and along with this me doing Mathematical modeling of it as well. 
+\section*{Appendix}
+Here, while there is nothing here now, there will be in the future, along with this message being deleted, but mainly there are a few quick things I want to specify here with this rough draft when you read this, and that is the following. Mainly with a few of the diagrams that I tried to use within my project in the middle of certain sections and are off center. This can be said for the diagram of discrete capacitors, in which it is off slightly to the left half of the page, and also missing the $\vec{r}$ coming out from the middle discrete capacitor, to symbolize radius, like it did in my Notebook, which I plan to fix with the rough draft. Along with this, for the subsections after math modeling, being COMSOL simulations and metamaterial unit cell design, I plan to expand up later on, mainly due to the fact that for the metamaterial unit cell design, I accidentally deleted the original design, and will have to redesign it within Autodesk inventor, which is also why the COMSOL section isn't complete due to this, and the involvement of it within COMSOL, which is why that will be more complete overall in the rough draft. This won't be a problem for re-sketching it, as the electric field normal graph that is from a top view is the right design of it, and I have it sketched in my Notebook, making this not a problem. The Citations and references I will fix as well, as the spacing is something I don't know how to fix, but will have fixed by the final draft due date. With the results section the same can be said about that as well, with every-time I try and add text to that section to describe the graphs ever so slightly, an error appears, or the image randomly goes down to the bottom of the page for a certain graph, which I will have fixed by the final draft, along with stuff, such as raw data added here as well, and python code I used for my stat. tests as well.
+\begin{thebibliography}{999}
+	\raggedright
+	\bibitem{quasistatic}
+	Chabalko, M. J., Shahmohammadi, M, Sample, A. P.
+	(2017, 02),
+	\emph{Quasistatic Cavity Resonance for Ubiquitous Wireless Power Transfer}.
+	Plos One, 12(2), 
+	\url{doi:10.1371/journal.pone.0169045}
+	
+	\raggedright
+	\bibitem{elecimedance}
+	Electrical impedance
+	(2018, November 12),
+	Retrieved from,
+    \url{https://en.wikipedia.org/wiki/Electricalimpedance}
+    
+    \raggedright
+    \bibitem{wirelssschagringexplained}
+    Mearian, L.
+    (2018, March 28).
+    \emph{Wireless charging explained: What is it and how does it work?}
+    Retrieved from,
+    \url{https://www.computerworld.com/article/3235176/mobile-wireless/wireless-charging-explained-what-is-it-and-how-does-it-work.html}
+    
+    \raggedright
+    \bibitem{metamats}
+    Institute of Physics.
+    (n.d.).
+    \emph{Metamaterials},
+    Retrieved from,
+    \url{http://www.iop.org/resources/topic/archive/metamaterials/}
+	
 \end{thebibliography}
-
 \end{document}
