@@ -8,6 +8,8 @@
 \usepackage{afterpage}
 \usepackage{lipsum}
 \usepackage{caption}
+\usepackage{listings}
+\usepackage{listing}
 \usetikzlibrary{arrows.meta}
 \usepackage[
 backend=biber,
@@ -570,7 +572,7 @@ With the positive matrix for the reflection coefficient now defined, we can then
 \end{equation}
 with the negative form of the reflection coefficient matrix now defined, we can now move on from that and finish defining all the math modeling components of my project. We shall now move onto the second most crucial part of the project, which is the Design of the Metamaterial Unit Cell in this case, which shall be discussed within the next Section of this Research paper. 
 \subsection*{Design of Metamaterial Unit Cell}
-When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$. The Following diagram of the metamaterial unit cell is shown down below, along with all of the parameters that are defined with the unit cell as well for measurements as well that are used on the metamaterial unit cell as well.
+When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$. The Following diagram of the Metamaterial unit cell is shown down below, along with all of the parameters that are defined with the unit cell as well for measurements as well that are used on the Metamaterial unit cell as well.
 \begin{figure}[H]
 \begin{tikzpicture}
  \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{UnitCell.png}};
@@ -579,48 +581,50 @@ When designing the Meta-material Unit Cell, multiple factors were taken into acc
  \draw(14.65,8) node{a};
  \draw(7.65,0.55) node{a};
  \draw(7.65, 14.65) node{a};
- \draw(9.35,8.75) node{$g_2$};
- \draw(5.95,8.75) node{$g_2$};
+ \draw(9.35,8) node{$g_2$};
+ \draw(5.95,8) node{$g_2$};
+ \draw(7.70,8.75) node{$g_1$};
+ \draw(7.70,7.25) node{$g_1$};
 \end{tikzpicture}
 \end{figure}
 \noindent
-Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and 
+Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly.
 \subsection*{COMSOL Simulations}
 For the simulations for this project within COMSOL, that being the version of COMSOL being 5.2A as the version of COMSOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COMSOL.
 \section*{Results}
-Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the Successful simulate that the electric field normal did.
+Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the Successful simulate that the electric field normal did. Along with that, what else is shown is mainly the one dimensional form of the electric field normal graphed on a one dimensional line graph in this case.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{SParameterGraph1D.png}
-	\caption{SParameterGraph1D}
+	\caption{The Figure above shows the graph for the 2 S-Parameters used within the simulation, with those being the S11 Parameters and S21 Parameters}
 	\label{test111}
 \end{figure}
 \noindent
-this is filer text
+The figure above mainly displays the results of the COMSOL Simulation for the S-Parameter. The S-Parameter can be seen to have 2 Parameters itself within the graph, this being the $S11$ parameter and $S21$ parameter from the COMSOL simulations on the Metamaterial unit cell. These are of course graphed within the graph above, that being for the $S11$ and $S21$ parameter from the COMSOL simulations that I did on the Metamaterial Unit Cell mainly.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{SmithPlotforReflection.png}
-	\caption{SParameterGraph1D}
+	\caption{This is the Smith Plot for the S21 and S11 Parameter from the simulations within COMSOL.}
 	\label{test1112}
 \end{figure}
 \noindent
-This is filler text.
+What the figure above shows is the Smith Plot Graph for the $S11$ Parameter and the $S21$ Parameter as well for the reflection of the Quasistatic magnetic field off the Metamaterial unit itself, via the impedance of the unit cell of the one used for simulations within COMSOL Multiphysics. This is what the purpose of the graph above mainly does, with it showing this graphed onto a smith plot.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm, height=10cm]{ElectricFieldNormalGraphImage2.png}
-	\caption{SParameterGraph1D}
+	\caption{The Figure above is for showing the Electric field normal of the unit cell.}
 	\label{test11122}
 \end{figure}
 \noindent
-This is filler text.
+Within the graph above we have the results of one of the main COMSOL Simulations, with that being for the electric field normal found from simulations done within COMSOL, with the electric field normal being graphed here on the unit cell, but this time with more top like perspective so that the unit cell itself can be seen from the COMSOL Simulations in this case.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm, height=10 cm]{ElectricFieldNormalGraphImage.png}
-	\caption{test2}
+	\caption{The Figure is above is for the graph of the Electric Field Normal of the Metamaterial unit cell.}
 	\label{test2121}
 \end{figure}
 \noindent
-Within the graph above we have the results of one of the main COMSOL Simulations, with that being 
+Above is the graph for the electric field normal is shown for the Metamaterial unit cell, with it this time being shown from a top perspective. This was mainly done for showing the unit cell of the Metamaterial, and the electric field normal of it from this top perspective mainly. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{QuasistaticMagneticFieldVectorDirectionGraphImages.png}
@@ -628,7 +632,7 @@ Within the graph above we have the results of one of the main COMSOL Simulations
 	\label{test982}
 \end{figure}
 \noindent
-The Graph above that was just shown is the simulation of the 
+The Graph above that was just shown is the simulation of the Quasistatic magnetic field, mainly showing the vector direction of the Quasistatic magnetic field that is inside the Quasistatic magnetic field generator. This is mainly shown by the arrows shown in the graph, which are mainly showing the vector direction of the Quasistatic magnetic field generator. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10.5 cm, height=10.5 cm]{OneDElectricFieldNormalGraphImage.png}
@@ -636,7 +640,7 @@ The Graph above that was just shown is the simulation of the
 	\label{test8128382}
 \end{figure}
 \noindent
-what the graph above shows is the electric field normal of the Quasistatic Magnetic Field on the 
+What the graph above shows is the electric field normal of the Quasistatic Magnetic Field on the unit cell used within COMSOL Simulation. The Data graphed here is mainly the magnitude of the electric field normal at different points on the unit cell itself. The graph above shows this with the units of the Electric field normal, that being the unit of $V/m$ for the Y axis. On the X axis of this graph, we have the magnitude of the electric field normal. Mainly, what is graphed above is the electric field normal in a one dimensional line graph form in this case. 
 \section*{Discussion}
 With some of the findings of the Data I had within my project, none stood out that much, but one that stood out in particular were the results I found with my S-Parameter, that being with figure 1 in the results section of this paper. The Reason that I say this is because with the S-Parameter, this being the Scattering Parameter, from the simulations in COMSOL, for $S11$ and $S21$ all appear to be the same, which I was expecting to be much different, with much more of a voltage loss for $S21$, which there wasn't which surprised me mainly due to that. This also can be said with the S-Parameters being involved once again, with this being the Smith Plot this time. The Main reason that I say this is that like the S-Parameter Graph, the Same can be said for the Smith Plot, with the two parameters being almost the same in data-points, but rather, with the values for the $S11$ Parameter and $S21$ Parameter. With these results that stand out the most, the possible reason that the $S11$ and $S21$ graphs and smith plot may have looked like this may have been a possible error by me when inputting the simulation parameters into COMSOL, in which a parameter I may have put in for the solver to use caused this to happen as a result, which is possible, but not likely, due to the many times I had to go back and fix the simulation to allow for the simulation to run in the first place, ruling this out as a likely scenario. With models that I have read and seen online, most have had a wide difference in how the two scattering parameters were graphed, that being not close as they were within my case, which saw the two values be nearly identical in where they were on the graph. This probably may have changed if I did more than one simulation on the Unit cell that I designed, that being with different material parameters. In relation to the graph of the Quasi-static Magnetic field Vector Direction Graph, the results of that turned out a mess, mainly due to the error of me inputting the parameters wrong into COMSOL for the simulation, or missing something when adding global parameter and missed the wrong variable in this case, causing for the results of that graph, which in this case is figure number 5 within the results section. Overall, the results that looked the most reasonable in this case would be the Multi-slice graphs that showed the electric field normal and how that interacted with the meta-material unit cell itself, which seemed to have the most reasonable outcome in terms of data.
 \section*{Conclusion}
@@ -644,7 +648,56 @@ In conclusion, for my project, the results I obtained, the mathematical modeling
 \section*{Acknowledgments}
 Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COMSOL, and along with this me doing Mathematical modeling of it as well. 
 \section*{Appendix}
-Here, while there is nothing here now, there will be in the future, along with this message being deleted, but mainly there are a few quick things I want to specify here with this rough draft when you read this, and that is the following. Mainly with a few of the diagrams that I tried to use within my project in the middle of certain sections and are off center. This can be said for the diagram of discrete capacitors, in which it is off slightly to the left half of the page, and also missing the $\vec{r}$ coming out from the middle discrete capacitor, to symbolize radius, like it did in my Notebook, which I plan to fix with the rough draft. Along with this, for the subsections after math modeling, being COMSOL simulations and metamaterial unit cell design, I plan to expand up later on, mainly due to the fact that for the metamaterial unit cell design, I accidentally deleted the original design, and will have to redesign it within Autodesk inventor, which is also why the COMSOL section isn't complete due to this, and the involvement of it within COMSOL, which is why that will be more complete overall in the rough draft. This won't be a problem for re-sketching it, as the electric field normal graph that is from a top view is the right design of it, and I have it sketched in my Notebook, making this not a problem. The Citations and references I will fix as well, as the spacing is something I don't know how to fix, but will have fixed by the final draft due date. With the results section the same can be said about that as well, with every-time I try and add text to that section to describe the graphs ever so slightly, an error appears, or the image randomly goes down to the bottom of the page for a certain graph, which I will have fixed by the final draft, along with stuff, such as raw data added here as well, and python code I used for my stat. tests as well.
+All of the Python code used for any statistical tests, t-tests, p-values, etc.
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+electricfieldnormaldata = pd.read_csv("Electric Normal Graph Data.csv")
+electricfieldnormaldata.describe()
+\end{lstlisting}
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+dataset = pd.read_csv("VectorArrowDirection - Quasistatic Magnetic Field Vector Arrows Data for Graph.csv")
+dataset.describe()
+\end{lstlisting}
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+dataset = pd.read_csv("MultiSliceDataFromQSField - Quasistatic Magnetic Field Vector Direction Graph Multislice Data.csv")
+dataset.describe()
+\end{lstlisting}
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection on Metamaterial Graph 1D Data.csv")
+dataset.describe()
+\end{lstlisting}
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection on Metamaterial Graph 1D Data.csv")
+dataset.describe()
+\end{lstlisting}
+\begin{lstlisting}
+import pandas as pd
+import matplotlib as plt
+from scipy.stats import stats
+
+dataset = pd.read_csv("SParameter Data - S Parameter Graph 1D Data.csv")
+dataset.describe()
+\end{lstlisting}
+Now, below is all the data-sets that are small enough to be displayed within this paper and not make the paper itself hundreds of pages long. 
 \begin{thebibliography}{999}
 	\raggedright
 	\bibitem{quasistatic}

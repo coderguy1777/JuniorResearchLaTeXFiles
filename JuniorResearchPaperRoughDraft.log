@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  24 NOV 2018 23:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  2 DEC 2018 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,13 +387,44 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@ContinuedFloat=\count113
 Package caption Info: float package is loaded.
 )
+(c:/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count114
+\lst@gtempboxa=\box41
+\lst@token=\toks31
+\lst@length=\count115
+\lst@currlwidth=\dimen167
+\lst@column=\count116
+\lst@pos=\count117
+\lst@lostspace=\dimen168
+\lst@width=\dimen169
+\lst@newlines=\count118
+\lst@lineno=\count119
+\lst@maxwidth=\dimen170
+
+(c:/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count120
+\lst@skipnumbers=\count121
+\lst@framebox=\box42
+)
+(c:/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+(c:/texlive/2018/texmf-dist/tex/latex/listing/listing.sty
+Package: listing 1999/05/25
+
+Package `listing', V1.2, <1999/05/25>
+\c@listing=\count122
+)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
 e.tex
 File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen167
-\pgfarrowlength=\dimen168
-\pgfarrowwidth=\dimen169
-\pgfarrowlinewidth=\dimen170
+\pgfarrowinset=\dimen171
+\pgfarrowlength=\dimen172
+\pgfarrowwidth=\dimen173
+\pgfarrowlinewidth=\dimen174
 ) (c:/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
@@ -418,7 +449,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (c:/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count114
+\etb@tempcnta=\count123
 )
 (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -435,7 +466,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (c:/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count115
+\lrq@indent=\count124
 
 (c:/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -446,49 +477,49 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 (c:/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
 (c:/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count116
-\decimalpart=\count117
+\integerpart=\count125
+\decimalpart=\count126
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count118
-\c@listtotal=\count119
-\c@listcount=\count120
-\c@liststart=\count121
-\c@liststop=\count122
-\c@citecount=\count123
-\c@citetotal=\count124
-\c@multicitecount=\count125
-\c@multicitetotal=\count126
-\c@instcount=\count127
-\c@maxnames=\count128
-\c@minnames=\count129
-\c@maxitems=\count130
-\c@minitems=\count131
-\c@citecounter=\count132
-\c@savedcitecounter=\count133
-\c@uniquelist=\count134
-\c@uniquename=\count135
-\c@refsection=\count136
-\c@refsegment=\count137
-\c@maxextratitle=\count138
-\c@maxextratitleyear=\count139
-\c@maxextradate=\count140
-\c@maxextraalpha=\count141
-\c@abbrvpenalty=\count142
-\c@highnamepenalty=\count143
-\c@lownamepenalty=\count144
-\c@maxparens=\count145
-\c@parenlevel=\count146
-\blx@tempcnta=\count147
-\blx@tempcntb=\count148
-\blx@tempcntc=\count149
-\blx@maxsection=\count150
-\blx@maxsegment@0=\count151
-\blx@notetype=\count152
-\blx@parenlevel@text=\count153
-\blx@parenlevel@foot=\count154
-\blx@sectionciteorder@0=\count155
+\c@tabx@nest=\count127
+\c@listtotal=\count128
+\c@listcount=\count129
+\c@liststart=\count130
+\c@liststop=\count131
+\c@citecount=\count132
+\c@citetotal=\count133
+\c@multicitecount=\count134
+\c@multicitetotal=\count135
+\c@instcount=\count136
+\c@maxnames=\count137
+\c@minnames=\count138
+\c@maxitems=\count139
+\c@minitems=\count140
+\c@citecounter=\count141
+\c@savedcitecounter=\count142
+\c@uniquelist=\count143
+\c@uniquename=\count144
+\c@refsection=\count145
+\c@refsegment=\count146
+\c@maxextratitle=\count147
+\c@maxextratitleyear=\count148
+\c@maxextradate=\count149
+\c@maxextraalpha=\count150
+\c@abbrvpenalty=\count151
+\c@highnamepenalty=\count152
+\c@lownamepenalty=\count153
+\c@maxparens=\count154
+\c@parenlevel=\count155
+\blx@tempcnta=\count156
+\blx@tempcntb=\count157
+\blx@tempcntc=\count158
+\blx@maxsection=\count159
+\blx@maxsegment@0=\count160
+\blx@notetype=\count161
+\blx@parenlevel@text=\count162
+\blx@parenlevel@foot=\count163
+\blx@sectionciteorder@0=\count164
 \labelnumberwidth=\skip43
 \labelalphawidth=\skip44
 \biblabelsep=\skip45
@@ -499,9 +530,9 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip50
 \blx@bcfin=\read2
 \blx@bcfout=\write5
-\c@mincomprange=\count156
-\c@maxcomprange=\count157
-\c@mincompwidth=\count158
+\c@mincomprange=\count165
+\c@maxcomprange=\count166
+\c@mincompwidth=\count167
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -512,74 +543,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count159
-\c@savedafterword=\count160
-\c@annotator=\count161
-\c@savedannotator=\count162
-\c@author=\count163
-\c@savedauthor=\count164
-\c@bookauthor=\count165
-\c@savedbookauthor=\count166
-\c@commentator=\count167
-\c@savedcommentator=\count168
-\c@editor=\count169
-\c@savededitor=\count170
-\c@editora=\count171
-\c@savededitora=\count172
-\c@editorb=\count173
-\c@savededitorb=\count174
-\c@editorc=\count175
-\c@savededitorc=\count176
-\c@foreword=\count177
-\c@savedforeword=\count178
-\c@holder=\count179
-\c@savedholder=\count180
-\c@introduction=\count181
-\c@savedintroduction=\count182
-\c@namea=\count183
-\c@savednamea=\count184
-\c@nameb=\count185
-\c@savednameb=\count186
-\c@namec=\count187
-\c@savednamec=\count188
-\c@translator=\count189
-\c@savedtranslator=\count190
-\c@shortauthor=\count191
-\c@savedshortauthor=\count192
-\c@shorteditor=\count193
-\c@savedshorteditor=\count194
-\c@labelname=\count195
-\c@savedlabelname=\count196
-\c@institution=\count197
-\c@savedinstitution=\count198
-\c@lista=\count199
-\c@savedlista=\count266
-\c@listb=\count267
-\c@savedlistb=\count268
-\c@listc=\count269
-\c@savedlistc=\count270
-\c@listd=\count271
-\c@savedlistd=\count272
-\c@liste=\count273
-\c@savedliste=\count274
-\c@listf=\count275
-\c@savedlistf=\count276
-\c@location=\count277
-\c@savedlocation=\count278
-\c@organization=\count279
-\c@savedorganization=\count280
-\c@origlocation=\count281
-\c@savedoriglocation=\count282
-\c@origpublisher=\count283
-\c@savedorigpublisher=\count284
-\c@publisher=\count285
-\c@savedpublisher=\count286
-\c@language=\count287
-\c@savedlanguage=\count288
-\c@origlanguage=\count289
-\c@savedoriglanguage=\count290
-\c@pageref=\count291
-\c@savedpageref=\count292
+\c@afterword=\count168
+\c@savedafterword=\count169
+\c@annotator=\count170
+\c@savedannotator=\count171
+\c@author=\count172
+\c@savedauthor=\count173
+\c@bookauthor=\count174
+\c@savedbookauthor=\count175
+\c@commentator=\count176
+\c@savedcommentator=\count177
+\c@editor=\count178
+\c@savededitor=\count179
+\c@editora=\count180
+\c@savededitora=\count181
+\c@editorb=\count182
+\c@savededitorb=\count183
+\c@editorc=\count184
+\c@savededitorc=\count185
+\c@foreword=\count186
+\c@savedforeword=\count187
+\c@holder=\count188
+\c@savedholder=\count189
+\c@introduction=\count190
+\c@savedintroduction=\count191
+\c@namea=\count192
+\c@savednamea=\count193
+\c@nameb=\count194
+\c@savednameb=\count195
+\c@namec=\count196
+\c@savednamec=\count197
+\c@translator=\count198
+\c@savedtranslator=\count199
+\c@shortauthor=\count266
+\c@savedshortauthor=\count267
+\c@shorteditor=\count268
+\c@savedshorteditor=\count269
+\c@labelname=\count270
+\c@savedlabelname=\count271
+\c@institution=\count272
+\c@savedinstitution=\count273
+\c@lista=\count274
+\c@savedlista=\count275
+\c@listb=\count276
+\c@savedlistb=\count277
+\c@listc=\count278
+\c@savedlistc=\count279
+\c@listd=\count280
+\c@savedlistd=\count281
+\c@liste=\count282
+\c@savedliste=\count283
+\c@listf=\count284
+\c@savedlistf=\count285
+\c@location=\count286
+\c@savedlocation=\count287
+\c@organization=\count288
+\c@savedorganization=\count289
+\c@origlocation=\count290
+\c@savedoriglocation=\count291
+\c@origpublisher=\count292
+\c@savedorigpublisher=\count293
+\c@publisher=\count294
+\c@savedpublisher=\count295
+\c@language=\count296
+\c@savedlanguage=\count297
+\c@origlanguage=\count298
+\c@savedoriglanguage=\count299
+\c@pageref=\count300
+\c@savedpageref=\count301
 \shorthandwidth=\skip51
 \shortjournalwidth=\skip52
 \shortserieswidth=\skip53
@@ -605,13 +636,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (c:/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count293
-\c@textcitetotal=\count294
-\c@textcitemaxnames=\count295
-\c@biburlnumpenalty=\count296
-\c@biburlucpenalty=\count297
-\c@biburllcpenalty=\count298
-\c@smartand=\count299
+\c@textcitecount=\count302
+\c@textcitetotal=\count303
+\c@textcitemaxnames=\count304
+\c@biburlnumpenalty=\count305
+\c@biburlucpenalty=\count306
+\c@biburllcpenalty=\count307
+\c@smartand=\count308
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -623,8 +654,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count300
-\c@bbx:relatedtotal=\count301
+\c@bbx:relatedcount=\count309
+\c@bbx:relatedtotal=\count310
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -654,38 +685,38 @@ Package biblatex Info: ... file 'english.lbx' found.
 (c:/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-\@quotelevel=\count302
-\@quotereset=\count303
+\@quotelevel=\count311
+\@quotereset=\count312
 
 (./JuniorResearchPaperRoughDraft.aux)
 \openout1 = `JuniorResearchPaperRoughDraft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  ABD: EveryShipout initializing macros
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
-\scratchdimen=\dimen171
-\scratchbox=\box41
-\nofMPsegments=\count305
-\nofMParguments=\count306
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count307
-\MPscratchDim=\dimen172
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count313
+\scratchdimen=\dimen175
+\scratchbox=\box43
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen176
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks33
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -741,7 +772,9 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count319
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -750,118 +783,118 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'JuniorResearchPaperRoughDraft.bbl' found.
 (./JuniorResearchPaperRoughDraft.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
+Package biblatex Info: Reference section=0 on input line 28.
+Package biblatex Info: Reference segment=0 on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 29.
  [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 31.
+(Font)              <9> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 31.
+(Font)              <5> on input line 33.
  [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 44.
+(Font)              <7> on input line 46.
  [4]
 
-LaTeX Warning: Command \l invalid in math mode on input line 74.
+LaTeX Warning: Command \l invalid in math mode on input line 76.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 74.
+LaTeX Warning: Command \l invalid in math mode on input line 76.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 74.
+LaTeX Warning: Command \l invalid in math mode on input line 76.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 84.
+LaTeX Warning: Command \l invalid in math mode on input line 86.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 84.
+LaTeX Warning: Command \l invalid in math mode on input line 86.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 84.
+LaTeX Warning: Command \l invalid in math mode on input line 86.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 94.
+LaTeX Warning: Command \l invalid in math mode on input line 96.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 94.
+LaTeX Warning: Command \l invalid in math mode on input line 96.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 94.
+LaTeX Warning: Command \l invalid in math mode on input line 96.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 102.
+LaTeX Warning: Command \l invalid in math mode on input line 104.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 102.
+LaTeX Warning: Command \l invalid in math mode on input line 104.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 102.
+LaTeX Warning: Command \l invalid in math mode on input line 104.
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 153--201
+Underfull \hbox (badness 10000) in paragraph at lines 155--203
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--201
+Underfull \hbox (badness 10000) in paragraph at lines 155--203
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 245--248
+Underfull \hbox (badness 10000) in paragraph at lines 247--250
 
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 \OT1/cmr/m/n/10 of,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 
  []
 
 [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 389--392
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 
  []
 
 [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 490--493
+Underfull \hbox (badness 10000) in paragraph at lines 492--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--504
+Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 519--522
+Underfull \hbox (badness 10000) in paragraph at lines 521--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--528
+Underfull \hbox (badness 10000) in paragraph at lines 526--530
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 547--550
+Underfull \hbox (badness 10000) in paragraph at lines 549--552
 
  []
 
@@ -869,66 +902,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 547--550
 <UnitCell.png, id=93, 462.22687pt x 462.97969pt>
 File: UnitCell.png Graphic file (type png)
 <use UnitCell.png>
-Package pdftex.def Info: UnitCell.png  used on input line 576.
+Package pdftex.def Info: UnitCell.png  used on input line 578.
 (pdftex.def)             Requested size: 430.00462pt x 430.70795pt.
  [22] [23 <./UnitCell.PNG>]
 <SParameterGraph1D.png, id=102, 855.94781pt x 324.46219pt>
 File: SParameterGraph1D.png Graphic file (type png)
 <use SParameterGraph1D.png>
-Package pdftex.def Info: SParameterGraph1D.png  used on input line 594.
+Package pdftex.def Info: SParameterGraph1D.png  used on input line 598.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
 <SmithPlotforReflection.png, id=103, 855.94781pt x 324.46219pt>
 File: SmithPlotforReflection.png Graphic file (type png)
 <use SmithPlotforReflection.png>
-Package pdftex.def Info: SmithPlotforReflection.png  used on input line 602.
+Package pdftex.def Info: SmithPlotforReflection.png  used on input line 606.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
  [24 <./SParameterGraph1D.png (PNG copy)>]
 <ElectricFieldNormalGraphImage2.png, id=107, 401.24907pt x 610.53094pt>
 File: ElectricFieldNormalGraphImage2.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage2.png>
 Package pdftex.def Info: ElectricFieldNormalGraphImage2.png  used on input line
- 610.
+ 614.
 (pdftex.def)             Requested size: 284.54596pt x 284.53674pt.
-<ElectricFieldNormalGraphImage.png, id=108, 401.24907pt x 610.53094pt>
+
+[25 <./SmithPlotforReflection.png (PNG copy)>]
+<ElectricFieldNormalGraphImage.png, id=112, 401.24907pt x 610.53094pt>
 File: ElectricFieldNormalGraphImage.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage.png>
 Package pdftex.def Info: ElectricFieldNormalGraphImage.png  used on input line 
-618.
+622.
 (pdftex.def)             Requested size: 284.54596pt x 284.53674pt.
-
-[25 <./SmithPlotforReflection.png (PNG copy)> <./ElectricFieldNormalGraphImage2
-.png (PNG copy)>]
-<QuasistaticMagneticFieldVectorDirectionGraphImages.png, id=113, 855.94781pt x 
+ [26 <./ElectricFieldNormalGraphImage2.png (PNG copy)>]
+<QuasistaticMagneticFieldVectorDirectionGraphImages.png, id=116, 855.94781pt x 
 324.46219pt>
 File: QuasistaticMagneticFieldVectorDirectionGraphImages.png Graphic file (type
  png)
 <use QuasistaticMagneticFieldVectorDirectionGraphImages.png>
 Package pdftex.def Info: QuasistaticMagneticFieldVectorDirectionGraphImages.png
-  used on input line 626.
+  used on input line 630.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
-<OneDElectricFieldNormalGraphImage.png, id=114, 489.32813pt x 609.02531pt>
+ [27 <./ElectricFieldNormalGraphImage.png (PNG copy)>]
+<OneDElectricFieldNormalGraphImage.png, id=120, 489.32813pt x 609.02531pt>
 File: OneDElectricFieldNormalGraphImage.png Graphic file (type png)
 <use OneDElectricFieldNormalGraphImage.png>
 Package pdftex.def Info: OneDElectricFieldNormalGraphImage.png  used on input l
-ine 634.
+ine 638.
 (pdftex.def)             Requested size: 298.75851pt x 298.75955pt.
- [26 <./ElectricFieldNormalGraphImage.png (PNG copy)> <./QuasistaticMagneticFie
-ldVectorDirectionGraphImages.png (PNG copy)>] [27 <./OneDElectricFieldNormalGra
-phImage.png (PNG copy)>] [28] [29]
-(./JuniorResearchPaperRoughDraft.aux)
+
+[28 <./QuasistaticMagneticFieldVectorDirectionGraphImages.png (PNG copy)>]
+[29 <./OneDElectricFieldNormalGraphImage.png (PNG copy)>] [30]
+Overfull \hbox (212.0019pt too wide) in paragraph at lines 665--666
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (302.00282pt too wide) in paragraph at lines 673--674
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (242.00221pt too wide) in paragraph at lines 681--682
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (242.00221pt too wide) in paragraph at lines 689--690
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 697--698
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[31] [32] (./JuniorResearchPaperRoughDraft.aux)
 Package logreq Info: Writing requests to 'JuniorResearchPaperRoughDraft.run.xml
 '.
 \openout1 = `JuniorResearchPaperRoughDraft.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20652 strings out of 492639
- 407681 string characters out of 6133102
- 905675 words of memory out of 5000000
- 24229 multiletter control sequences out of 15000+600000
+ 22260 strings out of 492639
+ 428826 string characters out of 6133102
+ 934905 words of memory out of 5000000
+ 25821 multiletter control sequences out of 15000+600000
  9988 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,67p,3638b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,67p,3638b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2018/texmf-dis
@@ -949,10 +1009,10 @@ live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018
 t/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb>
-Output written on JuniorResearchPaperRoughDraft.pdf (29 pages, 713920 bytes).
+Output written on JuniorResearchPaperRoughDraft.pdf (32 pages, 717413 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 208 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
