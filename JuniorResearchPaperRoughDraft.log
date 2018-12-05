@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  2 DEC 2018 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  4 DEC 2018 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,20 +910,20 @@ File: SParameterGraph1D.png Graphic file (type png)
 <use SParameterGraph1D.png>
 Package pdftex.def Info: SParameterGraph1D.png  used on input line 598.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
-<SmithPlotforReflection.png, id=103, 855.94781pt x 324.46219pt>
+ [24]
+<SmithPlotforReflection.png, id=106, 855.94781pt x 324.46219pt>
 File: SmithPlotforReflection.png Graphic file (type png)
 <use SmithPlotforReflection.png>
 Package pdftex.def Info: SmithPlotforReflection.png  used on input line 606.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
- [24 <./SParameterGraph1D.png (PNG copy)>]
 <ElectricFieldNormalGraphImage2.png, id=107, 401.24907pt x 610.53094pt>
 File: ElectricFieldNormalGraphImage2.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage2.png>
 Package pdftex.def Info: ElectricFieldNormalGraphImage2.png  used on input line
  614.
 (pdftex.def)             Requested size: 284.54596pt x 284.53674pt.
-
-[25 <./SmithPlotforReflection.png (PNG copy)>]
+ [25 <./SParameterGraph1D.png (PNG copy)> <./SmithPlotforReflection.png (PNG co
+py)>]
 <ElectricFieldNormalGraphImage.png, id=112, 401.24907pt x 610.53094pt>
 File: ElectricFieldNormalGraphImage.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage.png>
@@ -1009,7 +1009,7 @@ live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018
 t/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb>
-Output written on JuniorResearchPaperRoughDraft.pdf (32 pages, 717413 bytes).
+Output written on JuniorResearchPaperRoughDraft.pdf (32 pages, 719096 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams
