@@ -11,12 +11,7 @@
 \usepackage{listings}
 \usepackage{listing}
 \usetikzlibrary{arrows.meta}
-\usepackage[
-backend=biber,
-style=alphabetic,
-sorting=ynt
-]{biblatex}
-\graphicspath{ {c:/user/lolzk/S Parameter Graph 1D} }
+\graphicspath{ {c:/user/lolzk/SParameterGraph1D} }
 \graphicspath{ {c:/user/lolzk/Smith Plot for Reflection} }
 \graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image2} }
 \graphicspath{ {c:/user/lolzk/Electric Field Normal Graph Image} }
@@ -625,20 +620,22 @@ with the negative form of the reflection coefficient matrix now defined, we can 
 When designing the Meta-material Unit Cell, multiple factors were taken into account for the design, that being the greatest amount of resonance that would have to be achieved. The design of the unit cell was done by first defining measurement parameters for the material, those being \textit{w} = 0.10 mm, as the width of the piece for the charge center, and the length of the charge center for the meta-material unit cell being defined as \textit{l} = 0.45 mm. There are then the parameters that involve the distance from the charge center to inner pieces of the unit cell, with those being $g_{1}$, and $g_{2}$. These two parameters of the meta-material define the distance from the charge center to the innermost edges of the inner pieces within the unit cell. These parameters are defined as $g_{1}$ = 0.20 mm, and $g_{2}$ = 0.30 mm, and $g_{1}$ is the parameter that defines the distance from the vertical inner pieces of the meta-material unit cell, and there distance from the charge center. $g_{2}$ is the parameter that defines the same parameter as $g_{1}$ does, but does this for the inner pieces that lay horizontally rather than vertically. The Next Parameter used within this project for the meta-material unit cell is the parameter \textit{d}, with that being the width of the inner most part of the unit cell that contains the charge center, and defines the width and height of the inner part of the meta-material unit cell, Both the width and height of this part of the meta-material unit cell, with the parameter, $d$ = 1 mm. The last set of parameters for the meta-material unit cell are \textit{a}, which is defined as $a$ = 1.25 mm, and the last parameter being \textit{t}, which is the depth of the total material itself, with the parameter being defined as $t$ = 0.450 mm. Then, the makeup of the material was decided on, and the permittivity, $\epsilon_m$, permeability of the material, $\mu_m$, along with the conductivity of the material as well,  which can be defined as $\omega_m$. The Following diagram of the Metamaterial unit cell is shown down below, along with all of the parameters that are defined with the unit cell as well for measurements as well that are used on the Metamaterial unit cell as well.
 \begin{figure}[H]
 \begin{tikzpicture}
- \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{UnitCell.png}};
+ \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{UnitCell.PNG}};
  \draw(7.65,8) node{$\ell$};
  \draw(0.55,8) node{a};
  \draw(14.65,8) node{a};
  \draw(7.65,0.55) node{a};
  \draw(7.65, 14.65) node{a};
  \draw(9.35,8) node{$g_2$};
+ \draw[->, thick, black](7.4,0.55) -- (0.4, 0.55);
+ \draw[->, thick, black](8,0.55) -- (14.9, 0.55);
  \draw(5.95,8) node{$g_2$};
  \draw(7.70,8.75) node{$g_1$};
  \draw(7.70,7.25) node{$g_1$};
 \end{tikzpicture}
 \end{figure}
 \noindent
-Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that for the unit cell to be efficient at reflecting the Quasi-static Magnetic Field, 
+Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that for the unit cell to be efficient at reflecting the Quasistatic Magnetic Field, the charge center of the unit cell, in this case $\ell$, had to be 
 \subsection*{COMSOL Simulations}
 For the simulations for this project within COMSOL, that being the version of COMSOL being 5.2A as the version of COMSOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COMSOL. These boundaries were mainly meant to define some of the simulation parameters that were used later on used in COMSOL. Then for the Quasi-Static Magnetic Field Simulations within COMSOL, what was next defined was parameters for the domains of the cylinder, this being the Quasistatic Magnetic field generator that was simulated in COMSOL, had domain parameters defined for it, which are different from boundaries parameters due to them defining a large section of the cylinder used for the Quasistatic Magnetic field generator and that simulation when it was done. Once the simulation for that had been done, taking the results was done by COMSOL, and exporting the visual graphs that were created by COMSOL, and the data as a .txt file. This was also done for the other simulations that were done within COMSOL, such as the Metamaterial unit cell, and the simulation of the Quasistatic Magnetic Field around the unit cell. This was mainly done by taking the design I had from Autodesk Inventor for the Metamaterial unit cell, and re-sketching that in COMSOL, and once this was done, all of the separate parts sketched were reunited as one single piece in COMSOL. Once this was done, all of the necessary boundary parameters for the Material were added, along with an Artificial Material created in COMSOL using the Material manager to do so. Once this was done, simulations were ran with the results for the Electric Field Normal, $S11$ and $S21$ parameters were obtained as well, along with the impedance of the $S11$ and $S21$ parameters being obtained as well, which were all graphed onto a smith plot once the simulations were complete and finished within COMSOL Multiphysics itself, with the graphs being exported as a .txt file, and the graphs obtained from the COMSOL simulations as .png files. This was mainly all that was done for the simulations of this project, that were done for the simulation portion of this project within COMSOL Multiphysics 5.2a as the software used to conduct simulations in this project.
 \section*{Results}
@@ -747,7 +744,6 @@ from scipy.stats import stats
 dataset = pd.read_csv("SParameter Data - S Parameter Graph 1D Data.csv")
 dataset.describe()
 \end{lstlisting}
-Now, below is all the data-sets that are small enough to be displayed within this paper and not make the paper itself hundreds of pages long. 
 \begin{thebibliography}{999}
 	\raggedright
 	\bibitem{quasistatic}
