@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  4 DEC 2018 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.26)  6 DEC 2018 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,62 +839,62 @@ LaTeX Warning: Command \l invalid in math mode on input line 104.
 LaTeX Warning: Command \l invalid in math mode on input line 104.
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 155--203
+Underfull \hbox (badness 10000) in paragraph at lines 173--221
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--203
+Underfull \hbox (badness 10000) in paragraph at lines 173--221
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
 
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
 \OT1/cmr/m/n/10 of,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
 
  []
 
 [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 391--394
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
 
  []
 
 [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+Underfull \hbox (badness 10000) in paragraph at lines 542--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--506
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 521--524
+Underfull \hbox (badness 10000) in paragraph at lines 571--574
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--530
+Underfull \hbox (badness 10000) in paragraph at lines 576--580
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 549--552
+Underfull \hbox (badness 10000) in paragraph at lines 599--602
 
  []
 
@@ -902,25 +902,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--552
 <UnitCell.png, id=93, 462.22687pt x 462.97969pt>
 File: UnitCell.png Graphic file (type png)
 <use UnitCell.png>
-Package pdftex.def Info: UnitCell.png  used on input line 578.
+Package pdftex.def Info: UnitCell.png  used on input line 628.
 (pdftex.def)             Requested size: 430.00462pt x 430.70795pt.
  [22] [23 <./UnitCell.PNG>]
 <SParameterGraph1D.png, id=102, 855.94781pt x 324.46219pt>
 File: SParameterGraph1D.png Graphic file (type png)
 <use SParameterGraph1D.png>
-Package pdftex.def Info: SParameterGraph1D.png  used on input line 598.
+Package pdftex.def Info: SParameterGraph1D.png  used on input line 648.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
  [24]
 <SmithPlotforReflection.png, id=106, 855.94781pt x 324.46219pt>
 File: SmithPlotforReflection.png Graphic file (type png)
 <use SmithPlotforReflection.png>
-Package pdftex.def Info: SmithPlotforReflection.png  used on input line 606.
+Package pdftex.def Info: SmithPlotforReflection.png  used on input line 656.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
 <ElectricFieldNormalGraphImage2.png, id=107, 401.24907pt x 610.53094pt>
 File: ElectricFieldNormalGraphImage2.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage2.png>
 Package pdftex.def Info: ElectricFieldNormalGraphImage2.png  used on input line
- 614.
+ 664.
 (pdftex.def)             Requested size: 284.54596pt x 284.53674pt.
  [25 <./SParameterGraph1D.png (PNG copy)> <./SmithPlotforReflection.png (PNG co
 py)>]
@@ -928,7 +928,7 @@ py)>]
 File: ElectricFieldNormalGraphImage.png Graphic file (type png)
 <use ElectricFieldNormalGraphImage.png>
 Package pdftex.def Info: ElectricFieldNormalGraphImage.png  used on input line 
-622.
+672.
 (pdftex.def)             Requested size: 284.54596pt x 284.53674pt.
  [26 <./ElectricFieldNormalGraphImage2.png (PNG copy)>]
 <QuasistaticMagneticFieldVectorDirectionGraphImages.png, id=116, 855.94781pt x 
@@ -937,41 +937,41 @@ File: QuasistaticMagneticFieldVectorDirectionGraphImages.png Graphic file (type
  png)
 <use QuasistaticMagneticFieldVectorDirectionGraphImages.png>
 Package pdftex.def Info: QuasistaticMagneticFieldVectorDirectionGraphImages.png
-  used on input line 630.
+  used on input line 680.
 (pdftex.def)             Requested size: 430.00462pt x 162.99808pt.
  [27 <./ElectricFieldNormalGraphImage.png (PNG copy)>]
 <OneDElectricFieldNormalGraphImage.png, id=120, 489.32813pt x 609.02531pt>
 File: OneDElectricFieldNormalGraphImage.png Graphic file (type png)
 <use OneDElectricFieldNormalGraphImage.png>
 Package pdftex.def Info: OneDElectricFieldNormalGraphImage.png  used on input l
-ine 638.
+ine 688.
 (pdftex.def)             Requested size: 298.75851pt x 298.75955pt.
 
 [28 <./QuasistaticMagneticFieldVectorDirectionGraphImages.png (PNG copy)>]
 [29 <./OneDElectricFieldNormalGraphImage.png (PNG copy)>] [30]
-Overfull \hbox (212.0019pt too wide) in paragraph at lines 665--666
+Overfull \hbox (212.0019pt too wide) in paragraph at lines 715--716
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (302.00282pt too wide) in paragraph at lines 673--674
+Overfull \hbox (302.00282pt too wide) in paragraph at lines 723--724
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (242.00221pt too wide) in paragraph at lines 681--682
+Overfull \hbox (242.00221pt too wide) in paragraph at lines 731--732
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
 
-Overfull \hbox (242.00221pt too wide) in paragraph at lines 689--690
+Overfull \hbox (242.00221pt too wide) in paragraph at lines 739--740
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
 
-Overfull \hbox (1.99977pt too wide) in paragraph at lines 697--698
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 747--748
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -982,10 +982,10 @@ Package logreq Info: Writing requests to 'JuniorResearchPaperRoughDraft.run.xml
 
  ) 
 Here is how much of TeX's memory you used:
- 22260 strings out of 492639
- 428826 string characters out of 6133102
- 934905 words of memory out of 5000000
- 25821 multiletter control sequences out of 15000+600000
+ 22268 strings out of 492639
+ 429008 string characters out of 6133102
+ 934903 words of memory out of 5000000
+ 25829 multiletter control sequences out of 15000+600000
  9988 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,67p,3638b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1009,7 +1009,7 @@ live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018
 t/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb>
-Output written on JuniorResearchPaperRoughDraft.pdf (32 pages, 719096 bytes).
+Output written on JuniorResearchPaperRoughDraft.pdf (32 pages, 719743 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams

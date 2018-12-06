@@ -108,7 +108,10 @@ Now, with the equation written above, it can be used to calculate the strength o
 \begin{tikzpicture}
 \draw (0.5,3) ellipse (0cm and 0cm);
 \draw(8,0) circle(3 cm);
-\draw(8,0.1) circle(0.35cm) node{$H$};
+\draw(8,0.1) circle(0.35cm);
+\draw[fill](8, 0.12) circle(0.05cm);
+\draw(8.2, 1.2) circle(0.00cm) node{$r$};
+\draw(8, -0.5) circle(0.00cm) node{$H$};
 \draw(5.5,0.15) circle(0.35 cm) node{$H_-$};
 \draw(5.8,1.3) circle(0.35 cm) node{$H_+$};
 \draw(5.8,-0.95) circle(0.35 cm) node{$H_+$};
@@ -119,6 +122,7 @@ Now, with the equation written above, it can be used to calculate the strength o
 \draw(7.94, -2.5) circle(0.35 cm) node{$H_+$};
 \draw(9.4, -2.05) circle(0.35 cm) node{$H_-$};
 \draw(10.15, -1) circle(0.35 cm) node{$H_+$};
+\draw[->, thick, black](8,0.1) -- (9,2.5);
 \draw(10.13, 1.2) circle(0.35 cm) node{$H_+$};
 \draw(10.4, 0.1) circle(0.35 cm) node{$H_-$};
 \end{tikzpicture}
@@ -132,17 +136,29 @@ with $V$ being the dielectrics of the discrete capacitors, what it is defined as
 V =\frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}\cdot \vec{\mu}}{r^2} \cdot dt
 \end{equation}
 and then find with making the $\vec{H}$ into an integral for the + and - charge of each of the capacitors in the diagram shown of the discrete capacitors in the generator, the equation then becomes,
-\[V = \int_{H_-}^{H_+} \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot dt\]
+\begin{equation}
+V = \int_{H_-}^{H_+} \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot dt
+\end{equation}
 with this new equation, use $dt$ as the derivative we integrate the integral $\int_{H_-}^{H_+}$ using this derivative, the equation then becomes,
-\[V = \frac{-\lambda}{4\pi\epsilon_o} \int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot \biggr|_{H_{-}}^{H_{+}}\]
+\begin{equation}
+V = \frac{-\lambda}{4\pi\epsilon_o} \int_{in}^{out}\frac{\vec{H} \cdot \vec{\mu}}{r^2} \cdot \biggr|_{H_{-}}^{H_{+}}
+\end{equation}
 with the differential $dt$ removed, and used to integrate the integral $\int_{H_-}^{H_+}$, it can the equation can then become,
-\[V = \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}\]
+\begin{equation}
+V = \frac{\lambda}{4\pi\epsilon_o}\int_{in}^{out} \frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}
+\end{equation}
 Now, with this new equation found, we can then turn the integral $\int_{in}^{out}$ into a natural logarithm, which when symbolized is $ln$, which then gives us the equation
-\[V = \frac{\lambda}{4\pi\epsilon_o} \cdot \ln(\frac{out}{in})\frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}\]
+\begin{equation}
+V = \frac{\lambda}{4\pi\epsilon_o} \cdot \ln(\frac{out}{in})\frac{\vec{H}(+)(-) \cdot \vec{\mu}}{r^2}
+\end{equation}
 due to the presence of the new natural logarithm, $ln$, replacing the integral from the equation before where there was still the integral $\int_{int}^{out}$, which is now the natural logarithm $ln(\frac{out}{in})$. Then, to remove $r^2$ from the equation, we derive it out and have the new equation of, 
-\[V = \frac{\lambda}{4\pi\epsilon_o} \ln(\frac{out}{in})\vec{H}(+)(-)\cdot \vec{\mu}\]
+\begin{equation}
+V = \frac{\lambda}{4\pi\epsilon_o} \ln(\frac{out}{in})\vec{H}(+)(-)\cdot \vec{\mu}
+\end{equation}
 With the equation for the dielectrics of the capacitors now found, to find the total possible capacitance of each capacitor, the law of capacitance can be used to do this, with the equation for that law being,
-\[C = \frac{Q}{V} \]
+\begin{equation}
+C = \frac{Q}{V} 
+\end{equation}
 where $C$ is the total capacitance, which is divided by V, the dielectric of the capacitor in this case, using the capacitance law, we can substitute $Q$ for $\lambda$ in the equation  where $r^2$ is removed, which gives us the equation of,
 \begin{equation}
 V = \frac{Q}{4\pi\epsilon_o\mu}\ln(\frac{out}{in})\vec{H}(+)(-)
@@ -152,7 +168,9 @@ where $\vec{\mu}$ is carried over and added to the Coulombs constant for the equ
 C = \frac{Q}{\frac{Q}{4\pi\epsilon_o\mu}}\ln(\frac{out}{in})\vec{H}(+)(-)
 \end{equation}
 with this equation, when we remove $Q$ from the equation and divide it out from the nested fraction of the equation, we get the final equation of,
-\[C = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}\vec{H}(+)(-)\]
+\begin{equation}
+C = \frac{4\pi\epsilon_o\mu}{\ln(\frac{out}{in})}\vec{H}(+)(-)
+\end{equation}
 we then have the final equation for the total capacitance of each discrete capacitor within the diagram shown earlier in this section. With the total capacitance found for each of the discrete capacitors, we can then go onto finding the total possible energy stored in each discrete capacitor. For this, we can start out by defining the differential, $dQ$, which can be defined as $dQ$ = capacitance of a given capacitor for this function. With this differential, we can define this by placing one of the capacitor onto a 3d coordinate plane, as shown here within the diagram,
 \linebreak
 \begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
@@ -243,10 +261,14 @@ with the rule above essentially states is that as the radius of each discrete ca
 \vec{D} = [\epsilon]\vec{E}
 \end{equation}
 as the equation we will be using to expand and then define the curl equations for the $\vec{E}$ fields, and the $\vec{D}$ fields as well. Now that we have this equation however, we can then expand that equation into the following equation which will be used to find the curl of the $\vec{E}$ fields, and that equation is,
-\[D_x \hat{a}_x + D_y \hat{a}_y + D_z \hat{a}_z = (\epsilon_{xx} E_x + \epsilon_{xy}E_y + \epsilon_{xz}E_z)\hat{a}x+(\epsilon_{yx}E_x + \epsilon_{yy}E_y + \epsilon_{yz}E_z) \]
-\[\hat{a}y + (\epsilon_{zx}E_x + \epsilon_{zy}E_y + \epsilon_{zz}E_z)\hat{a}z\]
+\begin{equation}
+D_x \hat{a}_x + D_y \hat{a}_y + D_z \hat{a}_z = (\epsilon_{xx} E_x + \epsilon_{xy}E_y + \epsilon_{xz}E_z)\hat{a}x+(\epsilon_{yx}E_x + \epsilon_{yy}E_y + \epsilon_{yz}E_z)
+\end{equation}
+\begin{equation}
+\hat{a}y + (\epsilon_{zx}E_x + \epsilon_{zy}E_y + \epsilon_{zz}E_z)\hat{a}z
+\end{equation}
 \linebreak
-with this equation now defined for the curl of the vector fields of the Quasi-static magnetic field from the Quasi-static magnetic field generator, we can then use the equation that we defined for expanding the curl equations, and set each tensor value for each value of $\vec{D}$, which gives us the equations of,
+with this equation now defined for the curl of the vector fields of the Quasi-static magnetic field from the Quasi-static magnetic field generator, we can then use the equation that we defined for expanding the curl equations, and set each tensor value for each value of $\vec{D}$, with using equation 27 and 28, as they are the same equation in this case, which gives us the equations of,
 \begin{equation}
 \begin{array}{c}
 D_x = \epsilon_{xx} E_x + \epsilon_{xy}E_y + \epsilon_{xz}E_z\\
@@ -259,10 +281,16 @@ these equations are mainly for defining the equation given for Equation (10), in
 \vec{B} = [\mu]\vec{H}
 \end{equation}
 with $\vec{B}$ in the above equation, represents the $B$ fields of the Quasi-static Magnetic field generator, with $\vec{H}$ representing the $H$ fields of the Quasi-static magnetic field generator, and $\mu$ being used for the symbolizing of tensors in this equation. With this equation used, we can then write the new equation of,
-\[B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z\]
+\begin{equation}
+B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z
+\end{equation}
 with the adding of the $\vec{H}$ fields into the equation, we get the new equation of,
-\[B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z = (\mu_{xx}H_x+\mu_{xy}H_y + \mu_{xz}H_z)\hat{a}_x + (\mu_{yx}H_x + \mu_{yy}H_y + \mu_{yz}H_Z)\]
-\[\hat{a}_y + (\mu_{zx}H_x + \mu_{zy}H_y+ \mu_{zz}H_z)\hat{a}_z\]
+\begin{equation}
+B_x\hat{a}_x + B_y\hat{a}_y+B_z\hat{a}_z = (\mu_{xx}H_x+\mu_{xy}H_y + \mu_{xz}H_z)\hat{a}_x + (\mu_{yx}H_x + \mu_{yy}H_y + \mu_{yz}H_Z)
+\end{equation}
+\begin{equation}
+\hat{a}_y + (\mu_{zx}H_x + \mu_{zy}H_y+ \mu_{zz}H_z)\hat{a}_z
+\end{equation}
 with this equation now found for the $\vec{B}$ and $\vec{H}$ fields, using the equation 12, we can find a similar result to equation 11 by splitting $\vec{B}$ into a set of tensors, each for $x,y,z$, we can get the set of equations of,
 \begin{equation}
 \begin{array}{c}
@@ -286,9 +314,15 @@ in which we have equation 15 set equal to the partial time derivate with all the
 -\frac{\partial{B}_x}{\partial{t}}\hat{a}_x - \frac{\partial{B}_y}{\partial{t}}\hat{a}_y - \frac{\partial{B}_z}{\partial{t}}\hat{a}_z
 \end{equation}
 with that equation now defined for each component broken up into the partial derivatives, each one being used for either $x,y,z$ components of the $\vec{B}$ fields, we can take the hat components for each of the equations from equation set 15, and make the new set of equations that can be found to be,
-\[\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\frac{\partial{B}_x}{\partial{t}}\]
-\[\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\frac{\partial{B}_y}{\partial{t}}\]
-\[\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\frac{\partial{B}_z}{\partial{t}}\]
+\begin{equation}
+\frac{\partial{E}_z}{\partial{y}} - \frac{\partial{E}_y}{\partial{z}} = -\frac{\partial{B}_x}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_x}{\partial{z}} - \frac{\partial{E}_z}{\partial{x}} = -\frac{\partial{B}_y}{\partial{t}}
+\end{equation}
+\begin{equation}
+\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}} = -\frac{\partial{B}_z}{\partial{t}}
+\end{equation}
 with these equations defined for each hat component defined by for each part of the $\vec{B}$ field, and those hat component being $\hat{a}_x, \hat{a}_y, \hat{a}_z$ for those components of the $\vec{B}$ fields, being set equal to the components of the $\vec{E}$ fields, with those being from the $\vec{E}$ fields, and being set equal to each partial derivative for the $\vec{B}$ fields, along with each hat component, giving us the three equations above. Once this is done, we can also do this for the $\vec{H}$ fields as well, with the included components that are new within the following equation,
 \[\nabla \cdot \vec{H} = \vec{J} + \frac{\partial{\vec{D}}}{\partial{t}}\]
 in which we have the vector, $H$, being set being multiplied by $\nabla$, in which we have the divergence being calculated for the $H$ fields, and then when we expand the equation, we can get the new equation of,
@@ -305,9 +339,15 @@ now with the $\vec{J}$ components added to the equation, once we take the time p
 (\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{z}} - \frac{\partial{H}_z}{\partial{y}})\hat{a}_z = (J_x\hat{a}_x + J_y\hat{a}_y + J_z\hat{a}_z) + \frac{\partial}{\partial{t}}(D_x\hat{a}_x+D_y\hat{a}_y+D_z\hat{a}_z
 \end{equation}
 with these elements of the divergence equation now expanded from the original divergence equation we had for the $\vec{H}$ fields, we can then set each hat component for $\hat{a}$, that being the components $\hat{a}_x,\hat{a}_y,\hat{a}_z$, and once this is done, we get the new set of equations for this, which are down below and shown down below,
-\[\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = J_x + \frac{\partial{D}_x}{\partial{t}} \] 
-\[\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = J_y + \frac{\partial{D}_y}{\partial{t}} \]
-\[\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = J_z + \frac{\partial{D}_z}{\partial{t}} \]
+\begin{equation}
+\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = J_x + \frac{\partial{D}_x}{\partial{t}} 
+\end{equation}
+\begin{equation}
+\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = J_y + \frac{\partial{D}_y}{\partial{t}} 
+\end{equation}
+\begin{equation}
+\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = J_z + \frac{\partial{D}_z}{\partial{t}}
+\end{equation}
 in which we have each component of the expanded $\vec{H}$ field equations set equal to each $x,y,z$ components for solving for the divergence for the $\vec{H}$ fields. Now, we can also have an alternative form of this Divergence equation, which I shall first show with the $\vec{H}$ fields, which shall show the alternate form of the divergence equations, as I shall now show below,
 \begin{equation}
 \nabla \cdot \vec{H} = [\epsilon] \frac{\partial{\vec{E}}}{\partial{t}}
@@ -317,12 +357,22 @@ in which we have the $\vec{H}$ having the divergence calculated for, but this ti
 (\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}})\hat{a}_z
 \end{equation}
 while this result is similar to the divergence equations with the $\vec{H}$ fields, once we expanded what $\nabla \cdot \vec{H}$ is set equal to, we get the new equation of,
-\[(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}})\hat{a}_z = (\epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_x +\]
-\[(\epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_y + (\epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_z\]
+\begin{equation}
+(\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}})\hat{a}_x + (\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}})\hat{a}_y + (\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}})\hat{a}_z = (\epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_x 
+\end{equation}
+\begin{equation}
+(\epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_y + (\epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}})\hat{a}_z
+\end{equation}
 with this now expanded, we can then assign each of the expanded $\vec{H}$ field equations to there set of hat values that they have surrounding them, we get the new set of equations once this is done, with each of the properly expanded equations being done,
-\[\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = \epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}} \]
-\[\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = \epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}} \]
-\[\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = \epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}}\]
+\begin{equation}
+\frac{\partial{H}_z}{\partial{y}} - \frac{\partial{H}_y}{\partial{z}} = \epsilon_{xx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{xy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{xz}\frac{\partial{E}_z}{\partial{t}} 
+\end{equation}
+\begin{equation}
+\frac{\partial{H}_x}{\partial{z}} - \frac{\partial{H}_z}{\partial{x}} = \epsilon_{yx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{yy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{yz}\frac{\partial{E}_z}{\partial{t}} 
+\end{equation}
+\begin{equation}
+\frac{\partial{H}_y}{\partial{x}} - \frac{\partial{H}_x}{\partial{y}} = \epsilon_{zx}\frac{\partial{E}_x}{\partial{t}} + \epsilon_{zy}\frac{\partial{E}_y}{\partial{t}} + \epsilon_{zz}\frac{\partial{E}_z}{\partial{t}}
+\end{equation}
 and with this new set of equations that are set equal to each of the hat components for this expanded Divergence equation that we used for the $\vec{H}$ fields. We can also do this for an alternate form of calculating the divergence as well, with substituting in $\mu$ for $\epsilon$, and making that negative, and swapping the places of $\vec{H}$ and $\vec{E}$ to obtain the new equation of,
 \begin{equation}
 \nabla \cdot \vec{E} = -[\mu] \frac{\partial{\vec{H}}}{\partial{t}}
@@ -588,7 +638,7 @@ When designing the Meta-material Unit Cell, multiple factors were taken into acc
 \end{tikzpicture}
 \end{figure}
 \noindent
-Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that 
+Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that for the unit cell to be efficient at reflecting the Quasi-static Magnetic Field, 
 \subsection*{COMSOL Simulations}
 For the simulations for this project within COMSOL, that being the version of COMSOL being 5.2A as the version of COMSOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COMSOL. These boundaries were mainly meant to define some of the simulation parameters that were used later on used in COMSOL. Then for the Quasi-Static Magnetic Field Simulations within COMSOL, what was next defined was parameters for the domains of the cylinder, this being the Quasistatic Magnetic field generator that was simulated in COMSOL, had domain parameters defined for it, which are different from boundaries parameters due to them defining a large section of the cylinder used for the Quasistatic Magnetic field generator and that simulation when it was done. Once the simulation for that had been done, taking the results was done by COMSOL, and exporting the visual graphs that were created by COMSOL, and the data as a .txt file. This was also done for the other simulations that were done within COMSOL, such as the Metamaterial unit cell, and the simulation of the Quasistatic Magnetic Field around the unit cell. This was mainly done by taking the design I had from Autodesk Inventor for the Metamaterial unit cell, and re-sketching that in COMSOL, and once this was done, all of the separate parts sketched were reunited as one single piece in COMSOL. Once this was done, all of the necessary boundary parameters for the Material were added, along with an Artificial Material created in COMSOL using the Material manager to do so. Once this was done, simulations were ran with the results for the Electric Field Normal, $S11$ and $S21$ parameters were obtained as well, along with the impedance of the $S11$ and $S21$ parameters being obtained as well, which were all graphed onto a smith plot once the simulations were complete and finished within COMSOL Multiphysics itself, with the graphs being exported as a .txt file, and the graphs obtained from the COMSOL simulations as .png files. This was mainly all that was done for the simulations of this project, that were done for the simulation portion of this project within COMSOL Multiphysics 5.2a as the software used to conduct simulations in this project.
 \section*{Results}
