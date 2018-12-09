@@ -59,6 +59,7 @@ and then for use for the approximation with using the point of displacement to c
 \rho = x^2+y^2+z^2
 \end{equation}
 with that to be used in the approximation, for calculating the point of displacement, and with that, we can define an equation for the point of displacement, and in turn the Quasi-static Magnetic field at the point we selected in this case, with this equation being defined as,
+\\
 \begin{equation}
 B = \frac{\mu_0I}{4\pi} \cdot \frac{ \left(\begin{array}{c} 
 0 \\
@@ -304,7 +305,7 @@ where $\nabla$ is the divergence of the $\vec{E}$ fields, being set equal to the
 \end{equation}
 with this equation now defined, and using the partial time derivative from equation 14, that being $-\partial{t}$, we can then use that partial time derivative and set that as $-\frac{\partial}{\partial{t}}$, and then with that defined, equation 15 then becomes,
 \[(\frac{\partial{E}_y}{\partial{y}} - \frac{\partial{E}_x}{\partial{z}})\hat{a}_x + (\frac{\partial{E}_x}{\partial{x}} - \frac{\partial{E}_z}{\partial{x}}) \hat{a}_y + (\frac{\partial{E}_y}{\partial{x}} - \frac{\partial{E}_x}{\partial{y}})\hat{a}_z = -\frac{\partial}{\partial{t}}(B_x\hat{a}_x+B_y\hat{a}_y +B_z\hat{a}_z)\]
-in which we have equation 15 set equal to the partial time derivate with all the necessary components of the $\vec{B}$ fields included with the equation as well, and when we factor out the components of the $\vec{B}$ fields to obtain partial derivatives for those components, we get the equation of,
+in which we have equation 15 set equal to the partial time derivative with all the necessary components of the $\vec{B}$ fields included with the equation as well, and when we factor out the components of the $\vec{B}$ fields to obtain partial derivatives for those components, we get the equation of,
 \begin{equation}
 -\frac{\partial{B}_x}{\partial{t}}\hat{a}_x - \frac{\partial{B}_y}{\partial{t}}\hat{a}_y - \frac{\partial{B}_z}{\partial{t}}\hat{a}_z
 \end{equation}
@@ -629,17 +630,29 @@ When designing the Meta-material Unit Cell, multiple factors were taken into acc
  \draw(9.35,8) node{$g_2$};
  \draw[->, thick, black](7.4,0.55) -- (0.4, 0.55);
  \draw[->, thick, black](8,0.55) -- (14.9, 0.55);
+ \draw[->, thick, black](8, 14.65) -- (14.9, 14.65);
+ \draw[->, thick, black](7.4, 14.65) -- (0.4, 14.65);
+ \draw[->, thick, black](0.55, 7.85) -- (0.55, 0.75);
+ \draw[->, thick, black](0.55, 8.25) -- (0.55, 14.45);
+ \draw[->, thick, black](14.65, 7.8) -- (14.65, 0.75);
+ \draw[->, thick, black](14.65, 8.2) -- (14.65, 14.45);
  \draw(5.95,8) node{$g_2$};
  \draw(7.70,8.75) node{$g_1$};
  \draw(7.70,7.25) node{$g_1$};
+ \draw(1.85, 8) node{$e$};
+ \draw(13.35, 8) node{$e$};
+ \draw(7.65, 2.15) node{$e$};
+ \draw(7.65, 13.34) node{$e$};
 \end{tikzpicture}
+\caption{The Unit cell of the Metamaterial designed for this project.}
+\centering
 \end{figure}
 \noindent
-Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that for the unit cell to be efficient at reflecting the Quasistatic Magnetic Field, the charge center of the unit cell, in this case $\ell$, had to be 
+Within this unit cell, at the center, with that being defined as $\ell$ for measuring the width of the charge center, and $g_1$ for measuring the distance of the vertical most piece of the unit cell to the charge center in this case. the parameter $g_2$ in this case for measuring the distance of the horizontal most pieces of the Metamaterial unit cell and there distance from the charge center, which in this case is $\ell$. We then have the parameter, $a$, which is the width and height of the unit cell, which in this case is $a$, which shows the outside width and height of the unit cell shown in the picture above mainly. When this unit cell was being designed, several reasons were taken in to account, which resulted in the design above. The first one of these reasons is mainly due to the fact that for the unit cell to be efficient at reflecting the Quasistatic Magnetic Field, in this case $\ell$, was meant to be the part of the unit cell responsible for distributing charge in the unit cell, mainly in a way that allow little charge to be absorbed by the Metamaterial unit cell itself, and reflected off the unit cell, and distributed to a receiving device, in this case being what allowed for the reflection of the Quasistatic Magnetic Field off the unit cell, with the center most piece of the unit cell, $\ell$, being responsible for this. Then, with the pieces on the outer edges of the unit cell, but not the actual edge, with that being symbolized as $a$, which surrounds the outer most edges of the unit cell. In this, the inner edges and pieces of the unit cell, symbolized by $e$ in this case. These inner edges when added to the proposed unit cell, were mainly meant to be a part of the unit cell that would be responsible for taking in the charge that is from the Quasistatic Magnetic field, with that distributing it to the center, which in this case is $\ell$. The Metamaterial unit cell then reflects the Quasistatic Magnetic field, which is done mainly by the inner most pieces of the unit cell, in this case those being the pieces of the unit cell in the center most part, being responsible for reflecting the Quasistatic Magnetic field, which would then be received by the device. Once designing the Metamaterial Unit cell was done for this project, I then moved onto the next step of my methods and procedures, which was doing simulations within COMSOL mainly for the simulation part of my project.
 \subsection*{COMSOL Simulations}
 For the simulations for this project within COMSOL, that being the version of COMSOL being 5.2A as the version of COMSOL used for the simulation part of this project. The first simulation done was simulating the Quasi-static magnetic field generator, and the field itself when generated. For this simulation, the main generator, here will be defined as $\phi_c$, with the purpose of the c subscript defining the center generator and Quasi-static magnetic field center point. Then a cylinder was created with the length parameters for the height of the generator being defined as $\Delta$l $\approx$ 2.4384 m, and the radius of the generator being defined as $\Delta$r = 0.75 m. The Cylinder was then split along the center to define two separate domains to add simulation parameters to certain boundaries of the cylinder, and other parts of the Cylinder as well. Next, boundaries of the cylinder were defined for the Quasi-static magnetic field generator, and other components, were defined to have certain parameters for the COMSOL Simulation of the Quasi-static Magnetic Field within COMSOL. These boundaries were mainly meant to define some of the simulation parameters that were used later on used in COMSOL. Then for the Quasi-Static Magnetic Field Simulations within COMSOL, what was next defined was parameters for the domains of the cylinder, this being the Quasistatic Magnetic field generator that was simulated in COMSOL, had domain parameters defined for it, which are different from boundaries parameters due to them defining a large section of the cylinder used for the Quasistatic Magnetic field generator and that simulation when it was done. Once the simulation for that had been done, taking the results was done by COMSOL, and exporting the visual graphs that were created by COMSOL, and the data as a .txt file. This was also done for the other simulations that were done within COMSOL, such as the Metamaterial unit cell, and the simulation of the Quasistatic Magnetic Field around the unit cell. This was mainly done by taking the design I had from Autodesk Inventor for the Metamaterial unit cell, and re-sketching that in COMSOL, and once this was done, all of the separate parts sketched were reunited as one single piece in COMSOL. Once this was done, all of the necessary boundary parameters for the Material were added, along with an Artificial Material created in COMSOL using the Material manager to do so. Once this was done, simulations were ran with the results for the Electric Field Normal, $S11$ and $S21$ parameters were obtained as well, along with the impedance of the $S11$ and $S21$ parameters being obtained as well, which were all graphed onto a smith plot once the simulations were complete and finished within COMSOL Multiphysics itself, with the graphs being exported as a .txt file, and the graphs obtained from the COMSOL simulations as .png files. This was mainly all that was done for the simulations of this project, that were done for the simulation portion of this project within COMSOL Multiphysics 5.2a as the software used to conduct simulations in this project.
 \section*{Results}
-Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the Successful simulate that the electric field normal did. Along with that, what else is shown is mainly the one dimensional form of the electric field normal graphed on a one dimensional line graph in this case.
+Below is all the data collected for this project from the simulations within COSMOL that were successful, those being the electric field normal, and along with the S-Parameter graphs as well, which came from the successful simulate that the electric field normal did. Along with that, what else is shown is mainly the one dimensional form of the electric field normal graphed on a one dimensional line graph, showing the magnitudes of it at different points in time during the simulation run:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{SParameterGraph1D.png}
@@ -691,7 +704,7 @@ What the graph above shows is the electric field normal of the Quasistatic Magne
 \section*{Discussion}
 With some of the findings of the Data I had within my project, none stood out that much, but one that stood out in particular were the results I found with my S-Parameter, that being with figure 1 in the results section of this paper. The Reason that I say this is because with the S-Parameter, this being the Scattering Parameter, from the simulations in COMSOL, for $S11$ and $S21$ all appear to be the same, which I was expecting to be much different, with much more of a voltage loss for $S21$, which there wasn't which surprised me mainly due to that. This also can be said with the S-Parameters being involved once again, with this being the Smith Plot this time. The Main reason that I say this is that like the S-Parameter Graph, the Same can be said for the Smith Plot, with the two parameters being almost the same in data-points, but rather, with the values for the $S11$ Parameter and $S21$ Parameter. With these results that stand out the most, the possible reason that the $S11$ and $S21$ graphs and smith plot may have looked like this may have been a possible error by me when inputting the simulation parameters into COMSOL, in which a parameter I may have put in for the solver to use caused this to happen as a result, which is possible, but not likely, due to the many times I had to go back and fix the simulation to allow for the simulation to run in the first place, ruling this out as a likely scenario. With models that I have read and seen online, most have had a wide difference in how the two scattering parameters were graphed, that being not close as they were within my case, which saw the two values be nearly identical in where they were on the graph. This probably may have changed if I did more than one simulation on the Unit cell that I designed, that being with different material parameters. In relation to the graph of the Quasi-static Magnetic field Vector Direction Graph, the results of that turned out a mess, mainly due to the error of me inputting the parameters wrong into COMSOL for the simulation, or missing something when adding global parameter and missed the wrong variable in this case, causing for the results of that graph, which in this case is figure number 5 within the results section. Overall, the results that looked the most reasonable in this case would be the Multi-slice graphs that showed the electric field normal and how that interacted with the meta-material unit cell itself, which seemed to have the most reasonable outcome in terms of data.
 \section*{Conclusion}
-In conclusion, for my project, the results I obtained, the mathematical modeling done, and the COMSOL simulations that were done for this project.Simulations were done in COMSOL Multi-physics 5.2a, to obtain results such as the modeled Quasi-static magnetic field vector direction, and other graphs as well, such as the S-Parameter as well, with the rate of reflection and what was reflected off the meta-material unit cell designed for the receiver, and whether that would be an efficient method of allowing truly mobile wireless charging on a large scale, rather than what it is today, which can be found to be an extremely inconvenient method of wireless charging your device. The data that I received from these simulations however to show that this may not be the case yet, possibly due to the design of the Meta-material unit cell, with how it was designed, which showed this process of making wireless charging to be more efficient with the use of Meta-materials and Quasi-static magnetic fields in this, due to the data that I received from my COMSOL simulations, disproving my hypothesis for my project in the end.
+In conclusion, for my project, the results I obtained, the mathematical modeling done, and the COMSOL simulations that were done for this project. Simulations were done in COMSOL Multiphysics 5.2a, to obtain results such as the modeled Quasistatic magnetic field vector direction, and other graphs as well, such as the S-Parameter as well, with the rate of reflection and what was reflected off the meta-material unit cell designed for the receiver, and whether that would be an efficient method of allowing truly mobile wireless charging on a large scale, rather than what it is today, which can be found to be an extremely inconvenient method of wireless charging your device. The data that I received from these simulations however to show that this may not be the case yet, possibly due to the design of the Meta-material unit cell, with how it was designed, which showed this process of making wireless charging to be more efficient with the use of Meta-materials and Quasi-static magnetic fields in this, due to the data that I received from my COMSOL simulations, disproving my hypothesis for my project in the end.
 \section*{Acknowledgments}
 Relating to any Acknowledgments that I have for anyone for making my project possible and for it succeeding mainly, I would like to thank my scientific research teacher, Mrs.Lounsbury, for helping me narrow down my project idea. In this sense, she basically helped me narrow it down from what the project was originally, which was highly impractical, to practical via simulations within COMSOL, and along with this me doing Mathematical modeling of it as well. 
 \section*{Appendix}
@@ -709,7 +722,8 @@ import pandas as pd
 import matplotlib as plt
 from scipy.stats import stats
 
-dataset = pd.read_csv("VectorArrowDirection - Quasistatic Magnetic Field Vector Arrows Data for Graph.csv")
+dataset = pd.read_csv("VectorArrowDirection - Quasistatic Magnetic Field 
+Vector Arrows Data for Graph.csv")
 dataset.describe()
 \end{lstlisting}
 \begin{lstlisting}
@@ -717,7 +731,8 @@ import pandas as pd
 import matplotlib as plt
 from scipy.stats import stats
 
-dataset = pd.read_csv("MultiSliceDataFromQSField - Quasistatic Magnetic Field Vector Direction Graph Multislice Data.csv")
+dataset = pd.read_csv("MultiSliceDataFromQSField - Quasistatic Magnetic Field 
+Vector Direction Graph Multislice Data.csv")
 dataset.describe()
 \end{lstlisting}
 \begin{lstlisting}
@@ -725,7 +740,8 @@ import pandas as pd
 import matplotlib as plt
 from scipy.stats import stats
 
-dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection on Metamaterial Graph 1D Data.csv")
+dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection 
+on Metamaterial Graph 1D Data.csv")
 dataset.describe()
 \end{lstlisting}
 \begin{lstlisting}
@@ -733,7 +749,9 @@ import pandas as pd
 import matplotlib as plt
 from scipy.stats import stats
 
-dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection on Metamaterial Graph 1D Data.csv")
+\raggedright
+dataset = pd.read_csv("Reflection on Metamaterial Graph 1D Data - Reflection 
+on Metamaterial Graph 1D Data.csv")
 dataset.describe()
 \end{lstlisting}
 \begin{lstlisting}
